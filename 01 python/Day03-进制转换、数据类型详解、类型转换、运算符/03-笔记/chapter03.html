@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>算数运算符 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter04.html" />
+    
+    
+    <link rel="prev" href="./chapter02.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="算数运算符"
+        data-filepath="chapter03.md"
+        data-basepath="."
+        data-revision="Mon Feb 03 2020 12:30:22 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        整数类型操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        数据类型转换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        算数运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        赋值运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        比较运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        逻辑运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        位运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        运算符优先级
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;">&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p>&#x4E0B;&#x9762;&#x4EE5;a=10 ,b=20&#x4E3A;&#x4F8B;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;</p>
+<table style="text-align:center">
+<tr><th>&#x8FD0;&#x7B97;&#x7B26;</th><th>&#x63CF;&#x8FF0;</th><th>&#x5B9E;&#x4F8B;</th></tr>
+<tr><td>+</td><td>&#x52A0;</td><td>&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x76F8;&#x52A0; a + b &#x8F93;&#x51FA;&#x7ED3;&#x679C; 30</td></tr>
+<tr><td>-</td><td>&#x51CF;</td><td>&#x5F97;&#x5230;&#x8D1F;&#x6570;&#x6216;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x51CF;&#x53BB;&#x53E6;&#x4E00;&#x4E2A;&#x6570; a - b &#x8F93;&#x51FA;&#x7ED3;&#x679C; -10</td></tr>
+<tr><td>*</td><td>&#x4E58;</td><td>&#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x4E58;&#x6216;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x88AB;&#x91CD;&#x590D;&#x82E5;&#x5E72;&#x6B21;&#x7684;&#x5B57;&#x7B26;&#x4E32; a * b &#x8F93;&#x51FA;&#x7ED3;&#x679C; 200</td></tr>
+<tr><td>/</td><td>&#x9664;</td><td>b / a &#x8F93;&#x51FA;&#x7ED3;&#x679C; 2</td></tr>
+<tr><td>//</td><td>&#x53D6;&#x6574;&#x9664;</td><td>&#x8FD4;&#x56DE;&#x5546;&#x7684;&#x6574;&#x6570;&#x90E8;&#x5206; 9//2 &#x8F93;&#x51FA;&#x7ED3;&#x679C; 4 , 9.0//2.0 &#x8F93;&#x51FA;&#x7ED3;&#x679C; 4.0</td></tr>
+<tr><td>%</td><td>&#x53D6;&#x4F59;</td><td>&#x8FD4;&#x56DE;&#x9664;&#x6CD5;&#x7684;&#x4F59;&#x6570; b % a &#x8F93;&#x51FA;&#x7ED3;&#x679C; 0</td></tr>
+<tr><td>**</td><td>&#x6307;&#x6570;</td><td>a**b &#x4E3A;10&#x7684;20&#x6B21;&#x65B9;&#xFF0C; &#x8F93;&#x51FA;&#x7ED3;&#x679C; 100000000000000000000</td></tr>
+<tr><td>()</td><td>&#x5C0F;&#x62EC;&#x53F7;</td><td>&#x63D0;&#x9AD8;&#x8FD0;&#x7B97;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6BD4;&#x5982;: (1+2) * 3</td></tr>
+</table>
+
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6DF7;&#x5408;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x987A;&#x5E8F;&#x4E3A;&#xFF1A; <code>**</code> &#x9AD8;&#x4E8E; <code>* / % //</code> &#x9AD8;&#x4E8E; <code>+ -</code> &#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6B67;&#x4E49;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; () &#x6765;&#x5904;&#x7406;&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;&#x3002;
+&#x5E76;&#x4E14;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#x5728;&#x8FDB;&#x884C;&#x6DF7;&#x5408;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x6574;&#x6570;&#x5C06;&#x4F1A;&#x8F6C;&#x6362;&#x6210;&#x6D6E;&#x70B9;&#x6570;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-number">10</span> + <span class="hljs-number">5.5</span> * <span class="hljs-number">2</span>
+<span class="hljs-number">21.0</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>(<span class="hljs-number">10</span> + <span class="hljs-number">5.5</span>) * <span class="hljs-number">2</span>
+<span class="hljs-number">31.0</span>
+</code></pre>
+<h2 id="&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x4F7F;&#x7528;">&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x4F7F;&#x7528;</h2>
+<ul>
+<li>&#x5982;&#x679C;&#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x505A;&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x628A;&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+</ul>
+<pre><code class="lang-shell">In [1]: str1 =&apos;hello&apos;
+
+In [2]: str2 = &apos;world&apos;
+
+In [3]: str1+str2
+Out[3]: &apos;helloworld&apos;
+
+In [4]:
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x662F;&#x6570;&#x5B57;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x505A;&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x62A5;&#x9519;&#x3002;</li>
+</ul>
+<pre><code class="lang-shell">In [1]: str1 = &apos;hello&apos;
+
+In [2]: a = 2
+
+In [3]: a+str1
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-3-993727a2aa69> in <module>
+----&gt; 1 a+str1
+
+TypeError: unsupported operand type(s) for +: &apos;int&apos; and &apos;str&apos;
+</module></ipython-input-3-993727a2aa69></code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x662F;&#x6570;&#x5B57;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x505A;&#x4E58;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x4F1A;&#x5C06;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x91CD;&#x590D;&#x591A;&#x6B21;&#x3002;</li>
+</ul>
+<pre><code class="lang-shell">In [4]: str1 = &apos;hello&apos;
+
+In [5]: str1*10
+Out[5]: &apos;hellohellohellohellohellohellohellohellohellohello&apos;
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter02.html" class="navigation navigation-prev " aria-label="Previous page: 数据类型转换"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter04.html" class="navigation navigation-next " aria-label="Next page: 赋值运算符"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

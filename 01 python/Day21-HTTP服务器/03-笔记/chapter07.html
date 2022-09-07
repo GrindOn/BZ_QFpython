@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>使用装饰器管理请求路径 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter08.html" />
+    
+    
+    <link rel="prev" href="./chapter06.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="7"
+        data-chapter-title="使用装饰器管理请求路径"
+        data-filepath="chapter07.md"
+        data-basepath="."
+        data-revision="Thu Mar 05 2020 21:24:03 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        HTTP协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        手动搭建HTTP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        WSGI接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        新建WSGI服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        使用if管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        使用字典管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        使用装饰器管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        requests模块的介绍
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x7BA1;&#x7406;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;">&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x7BA1;&#x7406;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> wsgiref.simple_server <span class="hljs-keyword">import</span> make_server
+<span class="hljs-keyword">from</span> utils <span class="hljs-keyword">import</span> load_html, load_template
+
+g_url_route = {}
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">route</span><span class="hljs-params">(url)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_action</span><span class="hljs-params">(action)</span>:</span>
+        g_url_route[url] = action
+
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">do_action</span><span class="hljs-params">(start_response)</span>:</span>
+            <span class="hljs-keyword">return</span> action(start_response)
+
+        <span class="hljs-keyword">return</span> do_action
+
+    <span class="hljs-keyword">return</span> handle_action
+
+
+<span class="hljs-decorator">@route(&apos;/index.html&apos;)</span>
+<span class="hljs-decorator">@route(&apos;/&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_home</span><span class="hljs-params">(start_response)</span>:</span>
+    <span class="hljs-keyword">return</span> load_html(<span class="hljs-string">&apos;/index.html&apos;</span>, start_response)
+
+
+<span class="hljs-decorator">@route(&apos;/test.html&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_test</span><span class="hljs-params">(start_response)</span>:</span>
+    start_response(<span class="hljs-string">&apos;200 OK&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&quot;text/html;charset=utf-8&quot;</span>)])
+    <span class="hljs-keyword">return</span> [<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x6BB5;&#x666E;&#x901A;&#x7684;&#x6587;&#x5B57;&apos;</span>.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)]
+
+
+<span class="hljs-decorator">@route(&apos;/info.html&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_info</span><span class="hljs-params">(start_response)</span>:</span>
+    <span class="hljs-keyword">return</span> load_template(<span class="hljs-string">&apos;/info.html&apos;</span>, start_response, name=<span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>, age=<span class="hljs-number">18</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">application</span><span class="hljs-params">(environ, start_response)</span>:</span>
+    file_name = environ.get(<span class="hljs-string">&apos;PATH_INFO&apos;</span>)
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">return</span> g_url_route[file_name](start_response)
+    <span class="hljs-keyword">except</span> Exception:
+        start_response(<span class="hljs-string">&apos;404 NOT FOUND&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html;charset=utf-8&apos;</span>)])
+        <span class="hljs-keyword">return</span> [<span class="hljs-string">&apos;&#x5BF9;&#x4E0D;&#x8D77;&#xFF0C;&#x754C;&#x9762;&#x672A;&#x627E;&#x5230;&apos;</span>.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)]
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    httpd = make_server(<span class="hljs-string">&apos;&apos;</span>, <span class="hljs-number">8000</span>, application)
+    print(<span class="hljs-string">&quot;Serving HTTP on port 8000...&quot;</span>)
+    httpd.serve_forever()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter06.html" class="navigation navigation-prev " aria-label="Previous page: 使用字典管理请求路径"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter08.html" class="navigation navigation-next " aria-label="Next page: requests模块的介绍"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

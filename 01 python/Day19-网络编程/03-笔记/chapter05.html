@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>socket概念 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter06/index.html" />
+    
+    
+    <link rel="prev" href="./chapter04.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="5"
+        data-chapter-title="socket概念"
+        data-filepath="chapter05.md"
+        data-basepath="."
+        data-revision="Tue Mar 03 2020 12:12:09 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        网络通信概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        IP地址
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        网络通信方式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        端口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        socket概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06/index.html">
+            
+                
+                    <a href="./chapter06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        UDP协议
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="chapter06/section01.html">
+            
+                
+                    <a href="./chapter06/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        UDP发送接受数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="chapter06/section02.html">
+            
+                
+                    <a href="./chapter06/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        UDP发送接受数据
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07/index.html">
+            
+                
+                    <a href="./chapter07/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        TCP协议
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="chapter07/section01.html">
+            
+                
+                    <a href="./chapter07/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        TCP客户端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="chapter07/section02.html">
+            
+                
+                    <a href="./chapter07/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        TCP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="chapter07/section03.html">
+            
+                
+                    <a href="./chapter07/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        文件下载案例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="socket&#x7B80;&#x4ECB;">socket&#x7B80;&#x4ECB;</h2>
+<h3 id="1-&#x4E0D;&#x540C;&#x7535;&#x8111;&#x4E0A;&#x7684;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x5982;&#x4F55;&#x901A;&#x4FE1;">1. &#x4E0D;&#x540C;&#x7535;&#x8111;&#x4E0A;&#x7684;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x5982;&#x4F55;&#x901A;&#x4FE1;</h3>
+<p>&#x9996;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x662F;&#x5982;&#x4F55;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x5426;&#x5219;&#x901A;&#x4FE1;&#x65E0;&#x4ECE;&#x8C08;&#x8D77;&#xFF01;
+&#x5728;1&#x53F0;&#x7535;&#x8111;&#x4E0A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FDB;&#x7A0B;&#x53F7;&#xFF08;PID&#xFF09;&#x6765;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x7F51;&#x7EDC;&#x4E2D;&#x8FD9;&#x662F;&#x884C;&#x4E0D;&#x901A;&#x7684;&#x3002;
+&#x5176;&#x5B9E;TCP/IP&#x534F;&#x8BAE;&#x65CF;&#x5DF2;&#x7ECF;&#x5E2E;&#x6211;&#x4EEC;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x7F51;&#x7EDC;&#x5C42;&#x7684;&#x201C;ip&#x5730;&#x5740;&#x201D;&#x53EF;&#x4EE5;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x800C;&#x4F20;&#x8F93;&#x5C42;&#x7684;&#x201C;&#x534F;&#x8BAE;+&#x7AEF;&#x53E3;&#x201D;&#x53EF;&#x4EE5;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E3B;&#x673A;&#x4E2D;&#x7684;&#x5E94;&#x7528;&#x8FDB;&#x7A0B;&#xFF08;&#x8FDB;&#x7A0B;&#xFF09;&#x3002;
+&#x8FD9;&#x6837;&#x5229;&#x7528;<span style="color:blue">ip&#x5730;&#x5740;&#xFF0C;&#x534F;&#x8BAE;&#xFF0C;&#x7AEF;&#x53E3;</span>&#x5C31;&#x53EF;&#x4EE5;&#x6807;&#x8BC6;&#x7F51;&#x7EDC;&#x7684;&#x8FDB;&#x7A0B;&#x4E86;&#xFF0C;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x901A;&#x4FE1;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x6807;&#x5FD7;&#x4E0E;&#x5176;&#x5B83;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</p>
+<h5 id="&#x6CE8;&#x610F;&#xFF1A;">&#x6CE8;&#x610F;&#xFF1A;</h5>
+<blockquote>
+<p>&#x6240;&#x8C13;<code>&#x8FDB;&#x7A0B;</code>&#x6307;&#x7684;&#x662F;&#xFF1A;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x4EE5;&#x53CA;&#x8FD0;&#x884C;&#x65F6;&#x7528;&#x5230;&#x7684;&#x8D44;&#x6E90;&#x8FD9;&#x4E2A;&#x6574;&#x4F53;&#x79F0;&#x4E4B;&#x4E3A;&#x8FDB;&#x7A0B;&#xFF08;&#x5728;&#x8BB2;&#x89E3;&#x591A;&#x4EFB;&#x52A1;&#x7F16;&#x7A0B;&#x65F6;&#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#xFF09;</p>
+<p>&#x6240;&#x8C13;<code>&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;</code>&#x6307;&#x7684;&#x662F;&#xFF1A;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x5171;&#x4EAB;</p>
+</blockquote>
+<h3 id="2-&#x4EC0;&#x4E48;&#x662F;socket">2. &#x4EC0;&#x4E48;&#x662F;socket</h3>
+<p>socket(&#x7B80;&#x79F0; <code>&#x5957;&#x63A5;&#x5B57;</code>) &#x662F;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x4E0E;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x4E00;&#x4E2A;&#x4E3B;&#x8981;&#x4E0D;&#x540C;&#x662F;&#xFF1A;</p>
+<p>&#x5B83;&#x80FD;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x4E3B;&#x673A;&#x95F4;&#x7684;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#xFF0C;&#x6211;&#x4EEC;&#x7F51;&#x7EDC;&#x4E0A;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x670D;&#x52A1;&#x5927;&#x591A;&#x90FD;&#x662F;&#x57FA;&#x4E8E; Socket &#x6765;&#x5B8C;&#x6210;&#x901A;&#x4FE1;&#x7684;</p>
+<p>&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x6BCF;&#x5929;&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x3001;QQ &#x804A;&#x5929;&#x3001;&#x6536;&#x53D1; email &#x7B49;&#x7B49;&#x3002;</p>
+<p><img src="imgs/5B1ZLMH51VK5_55.png" alt=""></p>
+<p><img src="imgs/20101130174614758.gif" alt=""></p>
+<p><img src="imgs/e89a8ffb13931691b73d16.png" alt=""></p>
+<h3 id="3-&#x521B;&#x5EFA;socket">3. &#x521B;&#x5EFA;socket</h3>
+<p>&#x5728; Python &#x4E2D; &#x4F7F;&#x7528;socket &#x6A21;&#x5757;&#x7684;&#x51FD;&#x6570; socket &#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
+socket.socket(AddressFamily, Type)
+</code></pre>
+<h4 id="&#x8BF4;&#x660E;&#xFF1A;">&#x8BF4;&#x660E;&#xFF1A;</h4>
+<p>&#x51FD;&#x6570; socket.socket &#x521B;&#x5EFA;&#x4E00;&#x4E2A; socket&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5E26;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>Address Family&#xFF1A;&#x53EF;&#x4EE5;&#x9009;&#x62E9; AF_INET&#xFF08;&#x7528;&#x4E8E; Internet &#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#xFF09; &#x6216;&#x8005; AF_UNIX&#xFF08;&#x7528;&#x4E8E;&#x540C;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#xFF09;,&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x5E38;&#x7528;AF_INET</li>
+<li>Type&#xFF1A;&#x5957;&#x63A5;&#x5B57;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; SOCK_STREAM&#xFF08;&#x6D41;&#x5F0F;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E; TCP &#x534F;&#x8BAE;&#xFF09;&#x6216;&#x8005; SOCK_DGRAM&#xFF08;&#x6570;&#x636E;&#x62A5;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E; UDP &#x534F;&#x8BAE;&#xFF09;</li>
+</ul>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;tcp socket&#xFF08;tcp&#x5957;&#x63A5;&#x5B57;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;tcp&#x7684;&#x5957;&#x63A5;&#x5B57;</span>
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+<span class="hljs-comment"># ...&#x8FD9;&#x91CC;&#x662F;&#x4F7F;&#x7528;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x529F;&#x80FD;&#xFF08;&#x7701;&#x7565;&#xFF09;...</span>
+
+<span class="hljs-comment"># &#x4E0D;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5173;&#x95ED;&#x5957;&#x63A5;&#x5B57;</span>
+s.close()
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;udp socket&#xFF08;udp&#x5957;&#x63A5;&#x5B57;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;udp&#x7684;&#x5957;&#x63A5;&#x5B57;</span>
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+<span class="hljs-comment"># ...&#x8FD9;&#x91CC;&#x662F;&#x4F7F;&#x7528;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x529F;&#x80FD;&#xFF08;&#x7701;&#x7565;&#xFF09;...</span>
+<span class="hljs-comment"># &#x4E0D;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5173;&#x95ED;&#x5957;&#x63A5;&#x5B57;</span>
+s.close()
+</code></pre>
+<h5 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h5>
+<p>&#x5957;&#x63A5;&#x5B57;&#x4F7F;&#x7528;&#x6D41;&#x7A0B; &#x4E0E; &#x6587;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x5F88;&#x7C7B;&#x4F3C;</p>
+<ol>
+<li>&#x521B;&#x5EFA;&#x5957;&#x63A5;&#x5B57;</li>
+<li>&#x4F7F;&#x7528;&#x5957;&#x63A5;&#x5B57;&#x6536;/&#x53D1;&#x6570;&#x636E;</li>
+<li>&#x5173;&#x95ED;&#x5957;&#x63A5;&#x5B57;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter04.html" class="navigation navigation-prev " aria-label="Previous page: 端口"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter06/index.html" class="navigation navigation-next " aria-label="Next page: UDP协议"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+    留言板
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        #container {
+            padding-top: 30px;
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: rgba(131, 202, 227, 0.7);;
+        }
+
+        #msgs {
+            margin-bottom: 20px;
+        }
+
+        #msgs p {
+            font-size: 16px;
+            color: white;
+        }
+
+    </style>
+{% endblock %}
+
+{% block newcontent %}
+    <div id="container">
+        <div id="msgs">
+            <p>
+                留言内容
+            </p>
+            <p>
+                留言内容
+            </p>
+        </div>
+        <hr>
+        <form action="" method="post" enctype="multipart/form-data">
+            <p>
+                        <textarea name="board" class="mytextarea">
+
+                        </textarea>
+            </p>
+            <p></p>
+            <p style="text-align: right;">
+                <button type="submit" class="btn btn-primary">发表留言</button>
+            </p>
+
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static',filename='js/board.js') }}"></script>
+{% endblock %}

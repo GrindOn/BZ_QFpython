@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block title %}
+    用户中心
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        #container {
+            padding-top: 30px;
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
+        #container div {
+            float: left;
+        }
+
+        #left {
+            width: 30%;
+            height: 600px;
+            background-color: skyblue;
+        }
+
+        #left p {
+            margin-top: 40px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            padding: 10px;
+            cursor: default;
+        }
+
+
+        #right {
+            width: 70%;
+            height: 600px;
+            background-color: skyblue;
+            opacity: 0.5;
+        }
+
+        #right1 {
+            text-align: center;
+            padding-left: 120px;
+            padding-top: 100px;
+        }
+
+        #right1 p {
+            margin: 20px auto;
+        }
+    </style>
+{% endblock %}
+{% block newcontent %}
+    <div id="container">
+        <div id="left">
+            <p>用户信息修改</p>
+            <p>发表文章</p>
+        </div>
+        <div id="right">
+            <div id="right1">
+                <h2> 用户信息修改</h2>
+                <form action="{{ url_for('user.user_change') }}" method="post" enctype="multipart/form-data">
+                    <p><input type="text" class="form-control" id="InputUsername" name="username"
+                              value="{{ g.user.username }}">
+                    </p>
+                    <p><input type="text" class="form-control" id="InputPhone" name="phone" value="{{ g.user.phone }}"><span></span>
+                    </p>
+                    <p><input type="email" class="form-control" id="InputEmail1" name="email"
+                              value="{{ g.user.email }}">
+                    </p>
+                    <p><input type="file" id="exampleInputFile" name="icon"></p>
+                    <p>
+                        <img src="{{ url_for('static',filename='images/touxiang.jpg') }}" alt="" width="90"
+                             height="100">
+                    </p>
+                    <p>
+                        <button type="submit" class="btn btn-primary">用户信息修改</button>
+                    </p>
+
+                </form>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $('#InputPhone').blur(function () {
+            let phone = $(this).val();
+            let span_ele = $(this).next('span');
+            if (phone.length == 11) {
+                span_ele.text('');
+                $.get('{{ url_for('user.check_phone') }}', {phone: phone}, function (data) {
+                    // {#console.log(data);#}
+                    if (data.code != 200) {
+                        span_ele.css({"color": "#ff0011", "font-size": "12px"});
+                        span_ele.text(data.msg);
+                    }
+                })
+            } else {
+                span_ele.css({"color": "#ff0011", "font-size": "12px"});
+                span_ele.text('手机格式错误');
+            }
+
+        })
+    </script>
+{% endblock %}

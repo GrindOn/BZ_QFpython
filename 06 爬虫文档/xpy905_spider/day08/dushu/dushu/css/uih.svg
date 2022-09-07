@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="650px"
+     height="322.0px">
+    <style>text {font-family:PingFangSC-Regular, Microsoft YaHei, 'Hiragino Sans GB', Helvetica;
+        ;font-size:14px;fill:#666;}
+    </style>
+    <defs>
+        <path id="1" d="M0 35 H600"/>
+        <path id="2" d="M0 65 H600"/>
+        <path id="3" d="M0 105 H600"/>
+        <path id="4" d="M0 137 H600"/>
+        <path id="5" d="M0 163 H600"/>
+        <path id="6" d="M0 204 H600"/>
+        <path id="7" d="M0 243 H600"/>
+        <path id="8" d="M0 266 H600"/>
+    </defs>
+    <text lengthAdjust="spacing">
+        <textPath xlink:href="#1" textLength="294">汉义西连都临苏号夏湛楼晋肥深徽青陕县尔蒙城</textPath>
+        <textPath xlink:href="#2" textLength="588">安光湾民康远威合赣林开淄胜锡生冈层天龙三银金扬交太站洛厦博香村莞哈保春环振岳祥爱明韶</textPath>
+        <textPath xlink:href="#3" textLength="588">体德泰谊浙永澳宁内甘海孝齐友迁大宜淮公鞍道贵机中农鲁圳昆廊进封云石无清四汕桂隆肇年关</textPath>
+        <textPath xlink:href="#4" textLength="462">烟二昌府健学梅前南肃吉温门盐乌场凰谐衢十定庆成沿业区绍八镇皇津秦杭</textPath>
+        <textPath xlink:href="#5" textLength="364">创济沈曙港长工常设台乐利七华头园充治文潍佛街九乡主幸</textPath>
+        <textPath xlink:href="#6" textLength="406">绵旗衡一疆建才徐放黄庄宾重汾州风京波六新迎藏信江河弄兴川结</textPath>
+        <textPath xlink:href="#7" textLength="294">富名心红锦军向岛辽广家黑教化珠路市源襄邢通</textPath>
+        <textPath xlink:href="#8" textLength="448">郑武五朝人北解滨沙省平育阳宿福泉凤感湖惠和上团木花茂坊山嘉古遵拥</textPath>
+    </text>
+</svg>

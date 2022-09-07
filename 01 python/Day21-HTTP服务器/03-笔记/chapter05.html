@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>使用if管理请求路径 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter06.html" />
+    
+    
+    <link rel="prev" href="./chapter04.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="5"
+        data-chapter-title="使用if管理请求路径"
+        data-filepath="chapter05.md"
+        data-basepath="."
+        data-revision="Thu Mar 05 2020 21:24:03 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        HTTP协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        手动搭建HTTP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        WSGI接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        新建WSGI服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        使用if管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        使用字典管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        使用装饰器管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        requests模块的介绍
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x4F7F;&#x7528;if&#x7BA1;&#x7406;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;">&#x4F7F;&#x7528;if&#x7BA1;&#x7406;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;</h2>
+<p>&#x6587;&#x4EF6;&#x7ED3;&#x6784;:</p>
+<pre><code class="lang-python">&#x251C;&#x2500;&#x2500; server.py
+&#x251C;&#x2500;&#x2500; utils.py
+&#x251C;&#x2500;&#x2500; pages
+        &#x2514;&#x2500;&#x2500; index.html
+&#x2514;&#x2500;&#x2500; templates
+    &#x2514;&#x2500;&#x2500; info.html
+</code></pre>
+<p>utlis.py&#x6587;&#x4EF6;</p>
+<pre><code class="lang-python">PAGE_ROOT = <span class="hljs-string">&apos;./pages&apos;</span>
+TEMPLATE_ROOT = <span class="hljs-string">&apos;./templates&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_html</span><span class="hljs-params">(file_name, start_response, root=PAGE_ROOT)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x52A0;&#x8F7D;HTML&#x6587;&#x4EF6;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;
+    :param file_name: &#x9700;&#x8981;&#x52A0;&#x8F7D;&#x7684;HTML&#x6587;&#x4EF6;
+    :param start_response: &#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x5934;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x8BF7;&#x6C42;&#x5934;&#x8BBE;&#x7F6E;&#x4E3A;200,&#x5426;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;410
+    :param root: HTML&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x9ED8;&#x8BA4;PAGE_ROOT&#x8868;&#x793A;&#x9759;&#x6001;HTML&#x6587;&#x4EF6;&#xFF0C;TEMPLATE_ROOT&#x8868;&#x793A;&#x7684;&#x662F;&#x6A21;&#x677F;&#x6587;&#x4EF6;
+    :return: &#x8BFB;&#x53D6;HTML&#x6587;&#x4EF6;&#x6210;&#x529F;&#x7684;&#x8BDD;&#xFF0C;&#x8FD4;&#x56DE;HTML&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1B;&#x8BFB;&#x53D6;&#x5931;&#x8D25;&#x63D0;&#x793A;&#x8D44;&#x6E90;&#x88AB;&#x5220;&#x9664;
+    &quot;&quot;&quot;</span>
+    file_name = root + file_name
+    <span class="hljs-keyword">try</span>:
+        file = open(file_name, <span class="hljs-string">&apos;rb&apos;</span>)
+    <span class="hljs-keyword">except</span> IOError:
+        start_response(<span class="hljs-string">&apos;410 GONE&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&quot;text/html;charset=utf-8&quot;</span>)])
+        <span class="hljs-keyword">return</span> [<span class="hljs-string">&apos;&#x8D44;&#x6E90;&#x88AB;&#x5220;&#x9664;&#x4E86;&apos;</span>.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)]
+    <span class="hljs-keyword">else</span>:
+        start_response(<span class="hljs-string">&apos;200 OK&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&quot;text/html;charset=utf-8&quot;</span>)])
+        content = file.read()
+        <span class="hljs-keyword">return</span> [content]
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_template</span><span class="hljs-params">(file_name, start_respone, **kwargs)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x52A0;&#x8F7D;&#x6A21;&#x677F;&#x6587;&#x4EF6;
+    :param file_name: &#x9700;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x540D;
+    :param start_respone: &#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x5934;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x8BF7;&#x6C42;&#x5934;&#x8BBE;&#x7F6E;&#x4E3A;200,&#x5426;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;410
+    :param kwargs: &#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x6A21;&#x677F;&#x91CC;&#x7684;&#x53D8;&#x91CF;
+    :return: &#x8BFB;&#x53D6;HTML&#x6587;&#x4EF6;&#x6210;&#x529F;&#x7684;&#x8BDD;&#xFF0C;&#x8FD4;&#x56DE;HTML&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1B;&#x8BFB;&#x53D6;&#x5931;&#x8D25;&#x63D0;&#x793A;&#x8D44;&#x6E90;&#x88AB;&#x5220;&#x9664;
+    &quot;&quot;&quot;</span>
+    content = load_html(file_name, start_respone, root=TEMPLATE_ROOT)
+    html = content[<span class="hljs-number">0</span>].decode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+    <span class="hljs-keyword">if</span> html.startswith(<span class="hljs-string">&apos;&lt;!DOCTYPE html&gt;&apos;</span>):
+        <span class="hljs-keyword">return</span> [html.format(**kwargs).encode(<span class="hljs-string">&apos;utf-8&apos;</span>)]
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> content
+</code></pre>
+<p>service.py&#x6587;&#x4EF6;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> wsgiref.simple_server <span class="hljs-keyword">import</span> make_server
+<span class="hljs-keyword">from</span> utils <span class="hljs-keyword">import</span> load_html, load_template
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_home</span><span class="hljs-params">(start_response)</span>:</span>
+    <span class="hljs-keyword">return</span> load_html(<span class="hljs-string">&apos;/index.html&apos;</span>, start_response)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_test</span><span class="hljs-params">(start_response)</span>:</span>
+    start_response(<span class="hljs-string">&apos;200 OK&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&quot;text/html;charset=utf-8&quot;</span>)])
+    <span class="hljs-keyword">return</span> [<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x6BB5;&#x666E;&#x901A;&#x7684;&#x6587;&#x5B57;&apos;</span>.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)]
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_info</span><span class="hljs-params">(start_response)</span>:</span>
+    <span class="hljs-keyword">return</span> load_template(<span class="hljs-string">&apos;/info.html&apos;</span>, start_response, name=<span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>,age=<span class="hljs-number">18</span>})
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">application</span><span class="hljs-params">(environ, start_response)</span>:</span>
+    path = environ.get(<span class="hljs-string">&apos;PATH_INFO&apos;</span>)
+    <span class="hljs-comment"># &#x5904;&#x7406;&#x9996;&#x9875;&#x8BF7;&#x6C42;(&#x52A0;&#x8F7D;&#x4E00;&#x4E2A;HTML&#x6587;&#x4EF6;)</span>
+    <span class="hljs-keyword">if</span> path == <span class="hljs-string">&apos;/&apos;</span> <span class="hljs-keyword">or</span> path == <span class="hljs-string">&apos;/index.html&apos;</span>:
+        result = show_home(start_response)
+        <span class="hljs-keyword">return</span> result
+    <span class="hljs-comment"># &#x5904;&#x7406;test.html&#x8BF7;&#x6C42;(&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5B57;&#x7B26;&#x4E32;)</span>
+    <span class="hljs-keyword">elif</span> path == <span class="hljs-string">&apos;/test.html&apos;</span>:
+        <span class="hljs-keyword">return</span> show_test(start_response)
+    <span class="hljs-comment"># &#x5904;&#x7406;info.html&#x8BF7;&#x6C42;(&#x52A0;&#x8F7D;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;)</span>
+    <span class="hljs-keyword">elif</span> path == <span class="hljs-string">&apos;/info.html&apos;</span>:
+        <span class="hljs-keyword">return</span> show_info(start_response)
+    <span class="hljs-comment"># &#x5176;&#x5B83;&#x8BF7;&#x6C42;&#x6682;&#x65F6;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x8FD4;&#x56DE;404</span>
+    <span class="hljs-keyword">else</span>:
+        start_response(<span class="hljs-string">&apos;400 NOT FOUND&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&quot;text/html;charset=utf-8&quot;</span>)])
+        <span class="hljs-keyword">return</span> [<span class="hljs-string">&apos;&#x9875;&#x9762;&#x672A;&#x627E;&#x5230;&apos;</span>.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)]
+
+httpd = make_server(<span class="hljs-string">&apos;&apos;</span>, <span class="hljs-number">8000</span>, application)
+print(<span class="hljs-string">&quot;Serving HTTP on port 8000...&quot;</span>)
+httpd.serve_forever()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter04.html" class="navigation navigation-prev " aria-label="Previous page: 新建WSGI服务器"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter06.html" class="navigation navigation-next " aria-label="Next page: 使用字典管理请求路径"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

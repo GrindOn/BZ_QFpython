@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>管理第三方软件 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter05.html" />
+    
+    
+    <link rel="prev" href="./chapter03.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="4"
+        data-chapter-title="管理第三方软件"
+        data-filepath="chapter04.md"
+        data-basepath="."
+        data-revision="Sun Feb 16 2020 15:12:30 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        导入模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        常见系统模块的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        pip的安装配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        管理第三方软件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        自定义模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        包的使用
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x5305;">&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x5305;</h2>
+<p>&#x5BF9;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x7684;&#x7BA1;&#x7406;&#x4E3B;&#x8981;&#x5305;&#x542B;&#x67E5;&#x627E;&#x3001;&#x5B89;&#x88C5;&#x548C;&#x5378;&#x8F7D;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<p>&#x4F7F;&#x7528; <code>pip install &lt;&#x5305;&#x540D;&gt;</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x3002;</p>
+<pre><code class="lang-shell">pip install ipython # &#x5B89;&#x88C5;ipython&#x5305;
+</code></pre>
+<p>&#x4F7F;&#x7528; install &#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4ECE; pythonhosted&#x4E0B;&#x8F7D;&#xFF0C;&#x7531;&#x4E8E;&#x5404;&#x79CD;&#x539F;&#x56E0;&#xFF0C;&#x5728;&#x56FD;&#x5185;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x65F6;&#x5019;&#x751A;&#x81F3;&#x4F1A;&#x51FA;&#x73B0;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x56FD;&#x5185;&#x955C;&#x50CF;&#x6765;&#x63D0;&#x9AD8;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x3002;</p>
+<h4 id="&#x4E34;&#x65F6;&#x4FEE;&#x6539;">&#x4E34;&#x65F6;&#x4FEE;&#x6539;</h4>
+<p>&#x5982;&#x679C;&#x53EA;&#x662F;&#x60F3;&#x4E34;&#x65F6;&#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x7684;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF0C;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x540D;&#x540E;&#x9762;&#x6DFB;&#x52A0; -i &#x53C2;&#x6570;&#xFF0C;&#x518D;&#x6307;&#x5B9A;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#x5373;&#x53EF;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;<code>pip install &lt;&#x5305;&#x540D;&gt; -i &lt;&#x56FD;&#x5185;&#x955C;&#x50CF;&#x8DEF;&#x5F84;&gt;</code></p>
+<pre><code class="lang-shell">pip install ipython -i https://pypi.douban.com/simple
+</code></pre>
+<h4 id="&#x6C38;&#x4E45;&#x4FEE;&#x6539;">&#x6C38;&#x4E45;&#x4FEE;&#x6539;</h4>
+<p>&#x9664;&#x4E86;&#x4E34;&#x65F6;&#x4FEE;&#x6539;pip&#x7684;&#x4E0B;&#x8F7D;&#x6E90;&#x4EE5;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x80FD;&#x6C38;&#x4E45;&#x6539;&#x53D8;pip&#x7684;&#x9ED8;&#x8BA4;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x5728;&#x5F53;&#x524D;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;pip&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x521B;&#x5EFA;pip.ini&#x6587;&#x4EF6;&#x5E76;&#x8F93;&#x5165;&#x4E00;&#x4E0B;&#x5185;&#x5BB9;:</p>
+<pre><code class="lang-shell">[global]
+index-url=https://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
+</code></pre>
+<h4 id="&#x5E38;&#x89C1;&#x56FD;&#x5185;&#x955C;&#x50CF;">&#x5E38;&#x89C1;&#x56FD;&#x5185;&#x955C;&#x50CF;</h4>
+<ul>
+<li>&#x963F;&#x91CC;&#x4E91; <a href="https://mirrors.aliyun.com/pypi/simple/" target="_blank">https://mirrors.aliyun.com/pypi/simple/</a></li>
+<li>&#x4E2D;&#x56FD;&#x79D1;&#x6280;&#x5927;&#x5B66; <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank">https://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+<li>&#x8C46;&#x74E3;(douban) <a href="https://pypi.douban.com/simple/" target="_blank">https://pypi.douban.com/simple/</a></li>
+<li>&#x6E05;&#x534E;&#x5927;&#x5B66; <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank">https://pypi.tuna.tsinghua.edu.cn/simple/</a></li>
+<li>&#x4E2D;&#x56FD;&#x79D1;&#x5B66;&#x6280;&#x672F;&#x5927;&#x5B66; <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank">https://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+</ul>
+<h3 id="&#x5378;&#x8F7D;">&#x5378;&#x8F7D;</h3>
+<p>&#x4F7F;&#x7528; <code>pip install &lt;&#x5305;&#x540D;&gt;</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5378;&#x8F7D;&#x6307;&#x5B9A;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x3002;</p>
+<pre><code class="lang-shell">pip uninstall ipython # &#x5378;&#x8F7D;ipython&#x5305;
+</code></pre>
+<h3 id="&#x67E5;&#x627E;">&#x67E5;&#x627E;</h3>
+<p>&#x4F7F;&#x7528;<code>pip list</code> &#x6216;&#x8005; <code>pip freeze</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x6765;&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x529F;&#x80FD;&#x4E00;&#x81F4;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x6765;&#x663E;&#x793A;&#x5F53;&#x524D;&#x73AF;&#x5883;&#x91CC;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x5305;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;<code>pip list</code>&#x4F1A;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5305;&#xFF0C;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x65E0;&#x6CD5;uninstall&#x7684;&#x5305;&#xFF1B;&#x800C;<code>pip freeze</code>&#x53EA;&#x4F1A;&#x5217;&#x51FA;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x3002;</p>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<p>&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x4F7F;&#x7528;&#x5F88;&#x591A;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x8D44;&#x6E90;&#x5305;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5C06;&#x7A0B;&#x5E8F;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x4EC5;&#x8981;&#x628A;&#x4EE3;&#x7801;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x9700;&#x8981;&#x628A;&#x4EE3;&#x7801;&#x91CC;&#x7528;&#x5230;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x91CC;&#x5C31;&#x6709;&#x4E24;&#x4E2A;&#x95EE;&#x9898;:</p>
+<ol>
+<li><p>&#x5F53;&#x6211;&#x4EEC;&#x7535;&#x8111;&#x4E0A;&#x8FD0;&#x884C;&#x5F88;&#x591A;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x6BCF;&#x4E2A;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x53C8;&#x4E0D;&#x4E00;&#x81F4;&#x65F6;&#xFF0C;&#x600E;&#x6837;&#x5C06;&#x4EE3;&#x7801;&#x548C;&#x5B83;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x653E;&#x5728;&#x4E00;&#x8D77;&#x5462;&#xFF1F;&#x7B54;:&#x865A;&#x62DF;&#x73AF;&#x5883;</p>
+</li>
+<li><p>&#x600E;&#x6837;&#x5C06;&#x81EA;&#x5DF1;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x544A;&#x8BC9;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#xFF1F;</p>
+<blockquote>
+<ol>
+<li>&#x4F7F;&#x7528; pip freeze &gt; requires.txt &#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x4EE3;&#x7801;&#x91CC;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x4EE5;&#x53CA;&#x7248;&#x672C;&#x53F7;&#x5199;&#x5165;&#x5230; requirements.txt &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x90E8;&#x7F72;&#x65F6;&#xFF0C;&#x540C;&#x65F6;&#x5C06; requirements.txt &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x5728;&#x62FF;&#x5230;&#x4EE3;&#x7801;&#x4EE5;&#x540E;&#xFF0C;&#x9996;&#x5148;&#x8FD0;&#x884C; pip install -r  requirements.txt &#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x91CC;&#x5217;&#x51FA;&#x7684;&#x6240;&#x6709;&#x7B2C;&#x4E09;&#x65B9;&#x6846;&#x67B6;&#x5148;&#x5B89;&#x88C5;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x3002;</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="&#x4F7F;&#x7528;pycharm&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x5305;">&#x4F7F;&#x7528;pycharm&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x5305;</h3>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528;pip &#x547D;&#x4EE4;&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x4EE5;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x80FD;&#x4F7F;&#x7528;pycharm&#x6765;&#x5BF9;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;</p>
+<p><img src="imgs/pycharm&#x7BA1;&#x7406;&#x7B2C;&#x4E09;&#x65B9;&#x5305;.png" alt=""></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter03.html" class="navigation navigation-prev " aria-label="Previous page: pip的安装配置"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter05.html" class="navigation navigation-next " aria-label="Next page: 自定义模块"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

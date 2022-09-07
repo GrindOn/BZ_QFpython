@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>元组的使用 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter02/index.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="元组的使用"
+        data-filepath="chapter01.md"
+        data-basepath="."
+        data-revision="Sun Feb 09 2020 19:04:23 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        元组的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/index.html">
+            
+                
+                    <a href="./chapter02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        字典的基本使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter02/section01.html">
+            
+                
+                    <a href="./chapter02/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        字典的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/section02.html">
+            
+                
+                    <a href="./chapter02/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        字典的遍历
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        集合的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        转换相关
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        通用方法
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5143;&#x7EC4;">&#x5143;&#x7EC4;</h2>
+<p>Python&#x7684;&#x5143;&#x7EC4;&#x4E0E;&#x5217;&#x8868;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;<strong>&#x5143;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</strong>&#x3002;&#x5143;&#x7EC4;&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#xFF0C;&#x5217;&#x8868;&#x4F7F;&#x7528;&#x65B9;&#x62EC;&#x53F7;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>aTuple = (<span class="hljs-string">&apos;et&apos;</span>,<span class="hljs-number">77</span>,<span class="hljs-number">99.9</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>aTuple
+(<span class="hljs-string">&apos;et&apos;</span>,<span class="hljs-number">77</span>,<span class="hljs-number">99.9</span>)
+</code></pre>
+<h3 id="&#x4E00;&#x3001;&#x8BBF;&#x95EE;&#x5143;&#x7EC4;">&#x4E00;&#x3001;&#x8BBF;&#x95EE;&#x5143;&#x7EC4;</h3>
+<p><img src="imgs/&#x8BBF;&#x95EE;&#x5143;&#x7EC4;.png" alt=""></p>
+<h3 id="&#x4E8C;&#x3001;&#x4FEE;&#x6539;&#x5143;&#x7EC4;">&#x4E8C;&#x3001;&#x4FEE;&#x6539;&#x5143;&#x7EC4;</h3>
+<p><img src="imgs/&#x4FEE;&#x6539;&#x5143;&#x7EC4;.png" alt=""></p>
+<p>&#x8BF4;&#x660E;&#xFF1A; <span style="color:red;font-weight:700">python&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x5143;&#x7EC4;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x4E0D;&#x80FD;&#x5220;&#x9664;&#x5176;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;</span></p>
+<h3 id="&#x4E09;&#x3001;count-index">&#x4E09;&#x3001;count, index</h3>
+<p>index&#x548C;count&#x4E0E;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7528;&#x6CD5;&#x76F8;&#x540C;</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>a = (<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a.index(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>) <span class="hljs-comment"># &#x6CE8;&#x610F;&#x662F;&#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#x533A;&#x95F4;</span>
+Traceback (most recent call last):
+  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+ValueError: tuple.index(x): x <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> tuple
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a.index(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>)
+<span class="hljs-number">3</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a.count(<span class="hljs-string">&apos;b&apos;</span>)
+<span class="hljs-number">2</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a.count(<span class="hljs-string">&apos;d&apos;</span>)
+<span class="hljs-number">0</span>
+</code></pre>
+<h3 id="&#x56DB;&#x3001;&#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x5143;&#x7EC4;">&#x56DB;&#x3001;&#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x5143;&#x7EC4;</h3>
+<p>&#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5143;&#x7EC4;&#xFF0C;&#x9700;&#x8981;<strong>&#x5728;&#x552F;&#x4E00;&#x7684;&#x5143;&#x7D20;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x9017;&#x53F7;</strong></p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>a = (<span class="hljs-number">11</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+<span class="hljs-number">11</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>type(a)
+int
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a = (<span class="hljs-number">11</span>,)  <span class="hljs-comment"># &#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5143;&#x7EC4;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5728;&#x5143;&#x7D20;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x9017;&#x53F7;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+(<span class="hljs-number">11</span>,)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>type(a)
+tuple
+</code></pre>
+<h3 id="&#x4E94;&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;">&#x4E94;&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x7B2C;1&#x79CD;&#x65B9;&#x5F0F;,&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x53D8;&#x91CF;</span>
+a = <span class="hljs-number">4</span>
+b = <span class="hljs-number">5</span>
+c = <span class="hljs-number">0</span>
+
+c = a
+a = b
+b = c
+print(a)
+print(b)
+
+<span class="hljs-comment"># &#x7B2C;2&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x76F4;&#x63A5;&#x4EA4;&#x6362;&#x3002;</span>
+a, b = <span class="hljs-number">4</span>, <span class="hljs-number">5</span>
+a, b = b, a
+
+print(a)
+print(b)
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: 学习目标"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter02/index.html" class="navigation navigation-next " aria-label="Next page: 字典的基本使用"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

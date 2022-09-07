@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="249f2f0d-47b8-474d-b12a-ec1502f91fbd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YPng69mHQA71DEfoPz2hkC0rk6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chris\Desktop\Python基础\Day15-迭代器生成器\01-代码" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chris\Desktop\Python基础\Day15-迭代器生成器\01-代码" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.16-使用迭代器生成斐波那契数列">
+    <configuration name="12-高级装饰器" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/12-高级装饰器.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="13-装饰器的练习(了解)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/13-装饰器的练习(了解).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="14-可迭代对象" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/14-可迭代对象.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="15-迭代器的使用" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/15-迭代器的使用.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="16-使用迭代器生成斐波那契数列" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/16-使用迭代器生成斐波那契数列.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.16-使用迭代器生成斐波那契数列" />
+        <item itemvalue="Python.15-迭代器的使用" />
+        <item itemvalue="Python.14-可迭代对象" />
+        <item itemvalue="Python.13-装饰器的练习(了解)" />
+        <item itemvalue="Python.12-高级装饰器" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="249f2f0d-47b8-474d-b12a-ec1502f91fbd" name="Default Changelist" comment="" />
+      <created>1582853204941</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582853204941</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="371" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582868223370">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="371" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.760@0.0.1280.760" timestamp="1582868223370" />
+    <state width="1260" height="313" key="GridCell.Tab.0.bottom" timestamp="1582881125508">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="313" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1582881125508" />
+    <state width="1260" height="313" key="GridCell.Tab.0.center" timestamp="1582881125507">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="313" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1582881125507" />
+    <state width="1260" height="313" key="GridCell.Tab.0.left" timestamp="1582881125507">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="313" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1582881125507" />
+    <state width="1260" height="313" key="GridCell.Tab.0.right" timestamp="1582881125507">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="313" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1582881125507" />
+    <state width="1260" height="197" key="GridCell.Tab.1.bottom" timestamp="1582878465301">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="197" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1582878465301" />
+    <state width="1260" height="197" key="GridCell.Tab.1.center" timestamp="1582878465301">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="197" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1582878465301" />
+    <state width="1260" height="197" key="GridCell.Tab.1.left" timestamp="1582878465301">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="197" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1582878465301" />
+    <state width="1260" height="197" key="GridCell.Tab.1.right" timestamp="1582878465301">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="197" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1582878465301" />
+    <state x="144" y="26" key="SettingsEditor" timestamp="1582873078165">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="144" y="26" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1582873078165" />
+    <state x="310" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582873111214">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="310" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1582873111214" />
+  </component>
+</project>

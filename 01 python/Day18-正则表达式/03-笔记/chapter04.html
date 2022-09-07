@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>re.complie的使用 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter05.html" />
+    
+    
+    <link rel="prev" href="./chapter03.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="4"
+        data-chapter-title="re.complie的使用"
+        data-filepath="chapter04.md"
+        data-basepath="."
+        data-revision="Sun Mar 01 2020 21:44:51 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        正则查找
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        re.Match类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        re.complie的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        正则修饰符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        正则模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        正则替换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        贪婪模式和非贪婪模式
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="recompile&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;">re.compile&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;<code>re</code> &#x6A21;&#x5757;&#x7684; <code>match,search,findall</code>&#x7B49;&#x65B9;&#x6CD5;&#xFF0C;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;re.compile&#x65B9;&#x6CD5;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x8C61;&#xFF0C;&#x518D;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x8C61;&#x7684;&#x76F8;&#x5173;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x5339;&#x914D;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-python">re.match(<span class="hljs-string">r&apos;h&apos;</span>,<span class="hljs-string">&apos;hello&apos;</span>)  <span class="hljs-comment"># &#x53EF;&#x4EE5;&#x4F7F;&#x7528;re.match&#x65B9;&#x6CD5;&#x76F4;&#x63A5;&#x5339;&#x914D;</span>
+<span class="hljs-comment"># &#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;re&#x6A21;&#x5757;&#x7684;compile&#x65B9;&#x6CD5;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A; Pattern &#x5BF9;&#x8C61;&#xFF0C;&#x518D;&#x8C03;&#x7528; Pattern &#x5BF9;&#x8C61;&#x7684; match&#x65B9;&#x6CD5;</span>
+regex = re.compile(<span class="hljs-string">r&apos;h&apos;</span>)
+regex.match(<span class="hljs-string">&apos;hello&apos;</span>)
+
+re.search(<span class="hljs-string">r&apos;l&apos;</span>,<span class="hljs-string">&apos;hello&apos;</span>)
+regex = re.compile(<span class="hljs-string">r&apos;l&apos;</span>)
+regex.match(<span class="hljs-string">&apos;hello&apos;</span>)
+
+regex = re.compile(<span class="hljs-string">r&apos;l&apos;</span>)
+regex.findall(<span class="hljs-string">&apos;hello&apos;</span>)
+
+regex = re.complie(<span class="hljs-string">r&apos;l&apos;</span>)
+regex.finditer(<span class="hljs-string">&apos;hello&apos;</span>)
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter03.html" class="navigation navigation-prev " aria-label="Previous page: re.Match类"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter05.html" class="navigation navigation-next " aria-label="Next page: 正则修饰符"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

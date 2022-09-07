@@ -1,0 +1,12 @@
+pip install <package_name>  用来下载一个第三方的模块
+pip uninstall <package_name>  用来删除第三方模块
+pip list 用来列出当前环境安装的模块名和版本号
+pip freeze  用来列出当前环境安装的模块名和版本号
+
+阿里云服务器   从阿里镜像下载
+腾讯云服务器   从腾讯镜像下载
+临时修改，只修改这一个文件的下载路径
+pip install <package_name> -i <url>  从指定的地址下载包
+
+pip freeze > file_name  将安装的模块名和版本号重定向输出到指定的文件
+pip install -r file_name  读取文件里模块名和版本号并安装

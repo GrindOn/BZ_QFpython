@@ -1,0 +1,14 @@
+{% load cache %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面缓存</title>
+</head>
+<body>
+<h2> {{ current_time }} </h2>
+{% cache 10 'pre' %}
+    <h2>{{ pre_time }}</h2>
+{% endcache %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    {{ request.user.username }}  <a href="{% url 'App02:logout' %}">退出登录</a>
+{% else %}
+    你还没有登录，请先 <a href="{% url 'App02:login' %}">登录</a>
+{% endif %}
+</body>
+</html>

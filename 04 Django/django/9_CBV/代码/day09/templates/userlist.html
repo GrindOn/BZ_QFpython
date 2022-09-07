@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" width="80%">
+    {% for user in object_list %}
+    <tr>
+    <td>{{ user.uid }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.password }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<div>
+    {% for current in paginator.page_range %}
+        <a href="">{{ current }}</a>
+    {% endfor %}
+</div>
+</body>
+</html>

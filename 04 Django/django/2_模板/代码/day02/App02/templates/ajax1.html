@@ -1,0 +1,23 @@
+<form method="POST" action="">
+    {% csrf_token %}
+    <input id="username" type="text" name="username" />
+{#    <input type="submit" value="提交"/>#}
+    <a onclick="submitForm();">Ajax提交</a>
+</form>
+<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+<script>
+    function submitForm(){
+        var csrf = $('input[name="csrfmiddlewaretoken"]').val();
+        console.log(csrf)
+        var user = $('#user').val();
+        $.ajax({
+            url: '/hello/ajax/',
+            type: 'POST',
+            data: { "user":user,'csrfmiddlewaretoken': csrf},
+            success:function(arg){
+                console.log(arg);
+            }
+        })
+    }
+
+</script>

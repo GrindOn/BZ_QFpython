@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c06de3a9-1743-49ae-a877-838420be17c1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YglAQqSiJGIS2csJlCduPgBuyF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Python.11-join方法的使用">
+    <configuration name="07-进程不共享全局变量 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07-进程不共享全局变量.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="08-进程间通信" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08-进程间通信.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="09-queue队列" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/09-queue队列.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="10-进程池的使用" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10-进程池的使用.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="11-join方法的使用" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01-代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/11-join方法的使用.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.11-join方法的使用" />
+        <item itemvalue="Python.10-进程池的使用" />
+        <item itemvalue="Python.09-queue队列" />
+        <item itemvalue="Python.08-进程间通信" />
+        <item itemvalue="Python.07-进程不共享全局变量 (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c06de3a9-1743-49ae-a877-838420be17c1" name="Default Changelist" comment="" />
+      <created>1583371975649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583371975649</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="371" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583374587067">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="371" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.760@0.0.1280.760" timestamp="1583374587067" />
+    <state width="1260" height="195" key="GridCell.Tab.0.bottom" timestamp="1583398007644">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="195" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1583398007644" />
+    <state width="1260" height="195" key="GridCell.Tab.0.center" timestamp="1583398007644">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="195" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1583398007644" />
+    <state width="1260" height="195" key="GridCell.Tab.0.left" timestamp="1583398007643">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="195" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1583398007643" />
+    <state width="1260" height="195" key="GridCell.Tab.0.right" timestamp="1583398007644">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="195" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1583398007644" />
+    <state width="1260" height="236" key="GridCell.Tab.1.bottom" timestamp="1583395310635">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="236" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1583395310635" />
+    <state width="1260" height="236" key="GridCell.Tab.1.center" timestamp="1583395310634">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="236" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1583395310634" />
+    <state width="1260" height="236" key="GridCell.Tab.1.left" timestamp="1583395310634">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="236" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1583395310634" />
+    <state width="1260" height="236" key="GridCell.Tab.1.right" timestamp="1583395310634">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="236" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1583395310634" />
+  </component>
+</project>

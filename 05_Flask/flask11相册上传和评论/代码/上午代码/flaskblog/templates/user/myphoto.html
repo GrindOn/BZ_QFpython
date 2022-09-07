@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+    相册列表
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        #container {
+            padding-top: 30px;
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        #photo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+{% endblock %}
+
+{% block newcontent %}
+    <div id="container">
+        {% for photo in photos.items %}
+            <div id="photo">
+                <img src="http://qb894qzgn.bkt.clouddn.com/{{ photo.photo_name }}" alt="">
+            </div>
+        {% endfor %}
+        <nav aria-label="...">
+            <ul class="pager">
+                <li class="previous {% if not photos.has_prev %}disabled{% endif %}"><a href="{{ url_for('user.myphoto') }}?page={{ photos.prev_num }}"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+
+                <li class="next {% if not photos.has_next %}disabled {% endif %}"><a href="{{ url_for('user.myphoto') }}?page={{ photos.next_num }}">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+{% endblock %}

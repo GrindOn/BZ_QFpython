@@ -1,0 +1,2 @@
+2020-06-08 11:56:07,111 - __main__ - WARNING - Something maybe fail.
+2020-06-08 11:56:07,112 - __main__ - ERROR - error

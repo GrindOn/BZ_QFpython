@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>字典的增删改查 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter02/section02.html" />
+    
+    
+    <link rel="prev" href="../chapter02/index.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="字典的增删改查"
+        data-filepath="chapter02/section01.md"
+        data-basepath=".."
+        data-revision="Sun Feb 09 2020 19:04:23 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="../chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        元组的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/index.html">
+            
+                
+                    <a href="../chapter02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        字典的基本使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="chapter02/section01.html">
+            
+                
+                    <a href="../chapter02/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        字典的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/section02.html">
+            
+                
+                    <a href="../chapter02/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        字典的遍历
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="../chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        集合的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="../chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        转换相关
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="../chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        通用方法
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5B57;&#x5178;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;">&#x5B57;&#x5178;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;</h2>
+<h3 id="&#x4E00;&#x3001;&#x67E5;&#x770B;&#x5143;&#x7D20;">&#x4E00;&#x3001;&#x67E5;&#x770B;&#x5143;&#x7D20;</h3>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528;key&#x67E5;&#x627E;&#x6570;&#x636E;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;get&#x6765;&#x83B7;&#x53D6;&#x6570;&#x636E;</p>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>,<span class="hljs-string">&apos;age&apos;</span>:<span class="hljs-number">18</span>}
+
+print(info[<span class="hljs-string">&apos;age&apos;</span>]) <span class="hljs-comment"># &#x83B7;&#x53D6;&#x5E74;&#x9F84;</span>
+<span class="hljs-comment"># print(info[&apos;sex&apos;]) # &#x83B7;&#x53D6;&#x4E0D;&#x5B58;&#x5728;&#x7684;key&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x5F02;&#x5E38;</span>
+
+print(info.get(<span class="hljs-string">&apos;sex&apos;</span>)) <span class="hljs-comment"># &#x83B7;&#x53D6;&#x4E0D;&#x5B58;&#x5728;&#x7684;key&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x7A7A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5F02;&#x5E38;</span>
+print(info.get(<span class="hljs-string">&apos;sex&apos;</span>&#xFF0C; <span class="hljs-string">&apos;&#x7537;&apos;</span>))  <span class="hljs-comment"># &#x83B7;&#x53D6;&#x4E0D;&#x5B58;&#x5728;&#x7684;key, &#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;&#x503C;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x5B57;&#x5178;&#x5185;&#x5BB9;&#x3002;</p>
+<h3 id="&#x4E8C;&#x3001;&#x4FEE;&#x6539;&#x5143;&#x7D20;">&#x4E8C;&#x3001;&#x4FEE;&#x6539;&#x5143;&#x7D20;</h3>
+<p>&#x5B57;&#x5178;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x662F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x901A;&#x8FC7;key&#x627E;&#x5230;&#xFF0C;&#x5373;&#x53EF;&#x4FEE;&#x6539;</p>
+<p>demo:</p>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>}
+
+print(<span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x5178;&#x4E3A; %s:&apos;</span> % info)
+
+info[<span class="hljs-string">&apos;id&apos;</span>] = <span class="hljs-number">200</span>  <span class="hljs-comment"># &#x4E3A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x952E;&#x8D4B;&#x503C;&#x5C31;&#x662F;&#x4FEE;&#x6539;</span>
+
+print(<span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x5178;&#x4E3A; %s:&apos;</span> % info)
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>&#x4FEE;&#x6539;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x5178;&#x4E3A; {&apos;name&apos;: &apos;&#x73ED;&#x957F;&apos;, &apos;id&apos;: 100}
+&#x4FEE;&#x6539;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x5178;&#x4E3A; {&apos;name&apos;: &apos;&#x73ED;&#x957F;&apos;, &apos;id&apos;: 200}
+</code></pre><h3 id="&#x4E09;&#x3001;&#x6DFB;&#x52A0;&#x5143;&#x7D20;">&#x4E09;&#x3001;&#x6DFB;&#x52A0;&#x5143;&#x7D20;</h3>
+<p>&#x5982;&#x679C;&#x5728;&#x4F7F;&#x7528; <strong>&#x53D8;&#x91CF;&#x540D;[&apos;&#x952E;&apos;] = &#x6570;&#x636E;</strong> &#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x201C;&#x952E;&#x201D;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x65B0;&#x589E;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;</p>
+<p>demo:&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>}
+
+print(<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x5178;&#x4E3A;:%s&apos;</span> % info)
+
+info[<span class="hljs-string">&apos;id&apos;</span>] = <span class="hljs-number">100</span>  <span class="hljs-comment"># &#x4E3A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x952E;&#x8D4B;&#x503C;&#x5C31;&#x662F;&#x6DFB;&#x52A0;&#x5143;&#x7D20;</span>
+
+print(<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x5178;&#x4E3A;:%s&apos;</span> % info)
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>&#x6DFB;&#x52A0;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x5178;&#x4E3A;:{&apos;name&apos;: &apos;&#x73ED;&#x957F;&apos;}
+&#x6DFB;&#x52A0;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x5178;&#x4E3A;:{&apos;name&apos;: &apos;&#x73ED;&#x957F;&apos;, &apos;id&apos;: 100}
+</code></pre><h3 id="&#x56DB;&#x3001;&#x5220;&#x9664;&#x5143;&#x7D20;">&#x56DB;&#x3001;&#x5220;&#x9664;&#x5143;&#x7D20;</h3>
+<p>&#x5BF9;&#x5B57;&#x5178;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x6709;&#x4E00;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>del</li>
+<li>clear()</li>
+</ul>
+<p>demo:del&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>}
+
+print(<span class="hljs-string">&apos;&#x5220;&#x9664;&#x524D;,%s&apos;</span> % info)
+
+<span class="hljs-keyword">del</span> info[<span class="hljs-string">&apos;name&apos;</span>]  <span class="hljs-comment"># del &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x952E;&#x5220;&#x9664;&#x5B57;&#x5178;&#x91CC;&#x7684;&#x6307;&#x5B9A;&#x5143;&#x7D20;</span>
+
+print(<span class="hljs-string">&apos;&#x5220;&#x9664;&#x540E;,%s&apos;</span> % info)
+</code></pre>
+<p>&#x7ED3;&#x679C;</p>
+<pre><code>&#x5220;&#x9664;&#x524D;,{&apos;name&apos;: &apos;&#x73ED;&#x957F;&apos;, &apos;id&apos;: 100}
+&#x5220;&#x9664;&#x540E;,{&apos;id&apos;: 100}
+</code></pre><p>del&#x5220;&#x9664;&#x6574;&#x4E2A;&#x5B57;&#x5178;</p>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;monitor&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>}
+
+print(<span class="hljs-string">&apos;&#x5220;&#x9664;&#x524D;,%s&apos;</span>%info)
+
+<span class="hljs-keyword">del</span> info  <span class="hljs-comment"># del &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x53D8;&#x91CF;</span>
+
+print(<span class="hljs-string">&apos;&#x5220;&#x9664;&#x540E;,%s&apos;</span>%info)
+</code></pre>
+<p>&#x7ED3;&#x679C;</p>
+<pre><code>&#x5220;&#x9664;&#x524D;,{&apos;name&apos;: &apos;monitor&apos;, &apos;id&apos;: 100}
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name &apos;info&apos; is not defined
+</code></pre><p>clear&#x6E05;&#x7A7A;&#x6574;&#x4E2A;&#x5B57;&#x5178;</p>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;monitor&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>}
+
+print(<span class="hljs-string">&apos;&#x6E05;&#x7A7A;&#x524D;,%s&apos;</span>%info)
+
+info.clear()
+
+print(<span class="hljs-string">&apos;&#x6E05;&#x7A7A;&#x540E;,%s&apos;</span>%info)
+</code></pre>
+<p>&#x7ED3;&#x679C;</p>
+<pre><code>&#x6E05;&#x7A7A;&#x524D;,{&apos;name&apos;: &apos;monitor&apos;, &apos;id&apos;: 100}
+&#x6E05;&#x7A7A;&#x540E;,{}
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter02/index.html" class="navigation navigation-prev " aria-label="Previous page: 字典的基本使用"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter02/section02.html" class="navigation navigation-next " aria-label="Next page: 字典的遍历"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

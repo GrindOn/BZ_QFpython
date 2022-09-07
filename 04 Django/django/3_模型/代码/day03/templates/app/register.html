@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    用户名： <input type="text" name="username"> <br>
+    密码： <input type="text" name="password"> <br>
+{#    <input type="submit">#}
+    <input type="button" value="注册" id="button">
+</form>
+</body>
+</html>
+<script>
+    $("#button").click(function(){
+        username = $("[name='username']").val();
+        password = $("[name='password']").val();
+        csrf = $("[type='hidden']").val()
+        console.log(username,password,csrf);
+        //$.post("/register/",{'username':username,'password':password,'csrfmiddlewaretoken':csrf},function(data){
+        //    console.log(data)
+        //})
+         //$.post("/register/",{'username':username,'password':password},function(data){
+         //   console.log(data)
+        //})
+        //获取form的表单字段字符串
+        // csrfmiddlewaretoken=BTcUhdfu7brprHfqjNoG2wZpGkPWBxVan2dIMJ2tw0odR509Zuyka0QoDjZEN4jw&username=ds&password=111
+        console.log($("form").serialize());
+        $.post("/register/",$("form").serialize(),function(data){
+            console.log(data)
+        })
+    });
+</script>

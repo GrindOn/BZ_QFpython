@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>线程间通信 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter01/section04.html" />
+    
+    
+    <link rel="prev" href="../chapter01/section02.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="1.3"
+        data-chapter-title="线程间通信"
+        data-filepath="chapter01/section03.md"
+        data-basepath=".."
+        data-revision="Tue Mar 03 2020 22:20:29 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="chapter01.html">
+            
+                
+                    <a href="../chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        多任务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        线程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter01/section01.html">
+            
+                
+                    <a href="../chapter01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        线程安全问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter01/section02.html">
+            
+                
+                    <a href="../chapter01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        线程锁
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="chapter01/section03.html">
+            
+                
+                    <a href="../chapter01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        线程间通信
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter01/section04.html">
+            
+                
+                    <a href="../chapter01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        多线程版聊天
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/index.html">
+            
+                
+                    <a href="../chapter02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        进程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter02/section01.html">
+            
+                
+                    <a href="../chapter02/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        创建进程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/section02.html">
+            
+                
+                    <a href="../chapter02/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        进程和线程的区别
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter02/section03.html">
+            
+                
+                    <a href="../chapter02/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        进程间通信
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter02/section04.html">
+            
+                
+                    <a href="../chapter02/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        进程池
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;">&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;</h2>
+<p>&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x6709;&#x65F6;&#x9700;&#x8981;&#x901A;&#x4FE1;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x673A;&#x5236;&#x6765;&#x5B9E;&#x73B0;&#x8FDB;&#x7A0B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x5176;&#x4E2D;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6700;&#x591A;&#x7684;&#x662F;&#x961F;&#x5217;Queue.</p>
+<h3 id="queue&#x7684;&#x539F;&#x7406;">Queue&#x7684;&#x539F;&#x7406;</h3>
+<p>Queue&#x662F;&#x4E00;&#x4E2A;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#xFF08;First In First Out&#xFF09;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x4E3B;&#x8FDB;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Queue&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E24;&#x8005;&#x4E4B;&#x95F4;&#x901A;&#x8FC7;put( )&#x653E;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x901A;&#x8FC7;get( )&#x53D6;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x6267;&#x884C;&#x4E86;get( )&#x51FD;&#x6570;&#x4E4B;&#x540E;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x540C;&#x65F6;&#x5220;&#x9664;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;multiprocessing&#x6A21;&#x5757;&#x7684;Queue&#x5B9E;&#x73B0;&#x591A;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> threading
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> queue <span class="hljs-keyword">import</span> Queue
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">producer</span><span class="hljs-params">(queue)</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+        print(<span class="hljs-string">&apos;{}&#x5B58;&#x5165;&#x4E86;{}&apos;</span>.format(threading.current_thread().name, i))
+        queue.put(i)
+        time.sleep(<span class="hljs-number">0.1</span>)
+    <span class="hljs-keyword">return</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">consumer</span><span class="hljs-params">(queue)</span>:</span>
+    <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+        value = queue.get()
+        print(<span class="hljs-string">&apos;{}&#x53D6;&#x5230;&#x4E86;{}&apos;</span>.format(threading.current_thread().name, value))
+        time.sleep(<span class="hljs-number">0.1</span>)
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> value:
+            <span class="hljs-keyword">return</span>
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    queue = Queue()
+    t1 = threading.Thread(target=producer, args=(queue,))
+    t2 = threading.Thread(target=consumer, args=(queue,))
+    t3 = threading.Thread(target=consumer, args=(queue,))
+    t4 = threading.Thread(target=consumer, args=(queue,))
+    t6 = threading.Thread(target=consumer, args=(queue,))
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t6.start()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter01/section02.html" class="navigation navigation-prev " aria-label="Previous page: 线程锁"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter01/section04.html" class="navigation navigation-next " aria-label="Next page: 多线程版聊天"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

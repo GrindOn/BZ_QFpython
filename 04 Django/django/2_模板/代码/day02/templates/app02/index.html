@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+<table border="1" cellspacing="0" width="80%">
+    {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+        </tr>
+    {% endfor %}
+{{ 3+5 }}
+</table>
+</body>
+</html>

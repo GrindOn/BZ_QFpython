@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户页面</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        p span {
+            font-size: 14px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<form action="{{ url_for('hello_world') }}" method="post" enctype="multipart/form-data">
+    {{ uform.csrf_token }}
+    {#    #}
+    <p>{{ uform.name.label }}:{{ uform.name }} <span>{% if  uform.name.errors %}
+        {{ uform.name.errors.0 }} {% endif %}</span></p>
+    <p>{{ uform.password.label }}:{{ uform.password }} <span>{% if  uform.password.errors %}
+        {{ uform.password.errors.0 }}{% endif %}</span></p>
+    <p>{{ uform.confirm_pwd.label }}:{{ uform.confirm_pwd }} <span>{% if  uform.confirm_pwd.errors %}
+        {{ uform.confirm_pwd.errors.0 }}{% endif %}</span></p>
+    <p>{{ uform.phone.label }}:{{ uform.phone }} <span>{% if  uform.phone.errors %}
+        {{ uform.phone.errors.0 }}{% endif %}</span></p>
+    <p>{{ uform.icon.label }}:{{ uform.icon }} <span>{% if  uform.icon.errors %}
+        {{ uform.icon.errors.0 }}{% endif %}</span></p>
+    <p>{{ uform.recaptcha.label }}:{{ uform.recaptcha }} <img src="{{ url_for('get_image') }}" alt="" id="img"></p>
+    <p>{% if  uform.recaptcha.errors %}
+        {{ uform.recaptcha.errors.0 }}{% endif %}</p>
+    <p><input type="submit" value="提交"></p>
+</form>
+<script>
+    $('#img').click(function () {
+        console.log('-------')
+        $(this).attr('src', "{{ url_for('get_image') }}?ran=" + Math.random());
+    })
+
+</script>
+</body>
+</html>

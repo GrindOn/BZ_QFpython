@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>函数的返回值 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter05.html" />
+    
+    
+    <link rel="prev" href="./chapter03.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="4"
+        data-chapter-title="函数的返回值"
+        data-filepath="chapter04.md"
+        data-basepath="."
+        data-revision="Sun Feb 09 2020 13:02:11 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        什么是函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        函数的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        函数的参数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        函数的返回值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        文档注释
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        函数练习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        函数调用函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08/index.html">
+            
+                
+                    <a href="./chapter08/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        函数高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="chapter08/section01.html">
+            
+                
+                    <a href="./chapter08/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        局部变量和全局变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="chapter08/section02.html">
+            
+                
+                    <a href="./chapter08/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        函数返回值详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="chapter08/section03.html">
+            
+                
+                    <a href="./chapter08/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        函数参数详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="chapter08/section04.html">
+            
+                
+                    <a href="./chapter08/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        可变数据类型和不可变数据类型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x4E00;">&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;(&#x4E00;)</h2>
+<h3 id="&#x4E00;&#x3001;&#x8FD4;&#x56DE;&#x503C;&#x4ECB;&#x7ECD;">&#x4E00;&#x3001;&#x201C;&#x8FD4;&#x56DE;&#x503C;&#x201D;&#x4ECB;&#x7ECD;</h3>
+<p>&#x73B0;&#x5B9E;&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x573A;&#x666F;:</p>
+<blockquote>
+<p>&#x6211;&#x7ED9;&#x513F;&#x5B50;10&#x5757;&#x94B1;&#xFF0C;&#x8BA9;&#x4ED6;&#x7ED9;&#x6211;&#x4E70;&#x4E2A;&#x51B0;&#x6DC7;&#x6DCB;&#x3002;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;10&#x5757;&#x94B1;&#x662F;&#x6211;&#x7ED9;&#x513F;&#x5B50;&#x7684;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#x4F20;&#x9012;&#x5230;&#x53C2;&#x6570;&#xFF0C;&#x8BA9;&#x513F;&#x5B50;&#x4E70;&#x51B0;&#x6DC7;&#x6DCB;&#x8FD9;&#x4E2A;&#x4E8B;&#x60C5;&#x6700;&#x7EC8;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x8BA9;&#x4ED6;&#x628A;&#x51B0;&#x6DC7;&#x6DCB;&#x5E26;&#x56DE;&#x6765;&#xFF0C;&#x6B64;&#x65F6;&#x51B0;&#x6DC7;&#x6DCB;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x503C;</p>
+</blockquote>
+<p>&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x573A;&#x666F;&#xFF1A;</p>
+<blockquote>
+<p>&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B8C;&#x6210;&#x4E86;&#x83B7;&#x53D6;&#x5BA4;&#x5185;&#x6E29;&#x5EA6;&#xFF0C;&#x60F3;&#x4E00;&#x60F3;&#x662F;&#x4E0D;&#x662F;&#x5E94;&#x8BE5;&#x628A;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#xFF0C;&#x53EA;&#x6709;&#x8C03;&#x7528;&#x8005;&#x62E5;&#x6709;&#x4E86;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x624D;&#x80FD;&#x591F;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7684;&#x6E29;&#x5EA6;&#x505A;&#x9002;&#x5F53;&#x7684;&#x8C03;&#x6574;</p>
+</blockquote>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF1A;</p>
+<ul>
+<li>&#x6240;&#x8C13;&#x201C;&#x8FD4;&#x56DE;&#x503C;&#x201D;&#xFF0C;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x4E2D;&#x51FD;&#x6570;&#x5B8C;&#x6210;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x540E;&#xFF0C;&#x6700;&#x540E;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x7684;&#x7ED3;&#x679C;</li>
+<li><strong>&#x4F7F;&#x7528;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x524D;&#x63D0;&#x9700;&#x6C42;&#x5C31;&#x662F;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x8005;&#x60F3;&#x8981;&#x5728;&#x51FD;&#x6570;&#x5916;&#x4F7F;&#x7528;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;</strong></li>
+</ul>
+<h3 id="&#x4E8C;&#x3001;&#x5E26;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">&#x4E8C;&#x3001;&#x5E26;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</h3>
+<p>&#x60F3;&#x8981;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x628A;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;return</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add2num</span><span class="hljs-params">(a, b)</span>:</span>
+    c = a+b
+    <span class="hljs-keyword">return</span> c  <span class="hljs-comment"># return &#x540E;&#x53EF;&#x4EE5;&#x5199;&#x53D8;&#x91CF;&#x540D;</span>
+</code></pre>
+<p>&#x6216;&#x8005;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add2num</span><span class="hljs-params">(a, b)</span>:</span>
+    <span class="hljs-keyword">return</span> a+b  <span class="hljs-comment"># return &#x540E;&#x53EF;&#x4EE5;&#x5199;&#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;</span>
+</code></pre>
+<h3 id="&#x4E09;&#x3001;&#x4FDD;&#x5B58;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;">&#x4E09;&#x3001;&#x4FDD;&#x5B58;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;</h3>
+<p>&#x5728;&#x672C;&#x5C0F;&#x8282;&#x521A;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BF4;&#x8FC7;&#x7684;&#x201C;&#x4E70;&#x51B0;&#x6DC7;&#x6DCB;&#x201D;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x513F;&#x5B50;&#x7ED9;&#x4F60;&#x51B0;&#x6DC7;&#x6DCB;&#x65F6;&#xFF0C;&#x4F60;&#x4E00;&#x5B9A;&#x662F;&#x4ECE;&#x513F;&#x5B50;&#x624B;&#x4E2D;&#x63A5;&#x8FC7;&#x6765; &#x5BF9;&#x4E48;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x60F3;&#x8981;&#x7528;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x4FDD;&#x5B58;</p>
+<p>&#x4FDD;&#x5B58;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x5B9A;&#x4E49;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add2num</span><span class="hljs-params">(a, b)</span>:</span>
+    <span class="hljs-keyword">return</span> a+b
+
+<span class="hljs-comment">#&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x987A;&#x4FBF;&#x4FDD;&#x5B58;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;</span>
+result = add2num(<span class="hljs-number">100</span>,<span class="hljs-number">98</span>)
+
+<span class="hljs-comment">#&#x56E0;&#x4E3A;result&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x4E86;add2num&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;</span>
+print(result)
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-python"><span class="hljs-number">198</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter03.html" class="navigation navigation-prev " aria-label="Previous page: 函数的参数"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter05.html" class="navigation navigation-next " aria-label="Next page: 文档注释"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

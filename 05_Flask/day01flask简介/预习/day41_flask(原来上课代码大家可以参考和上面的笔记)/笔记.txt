@@ -1,0 +1,132 @@
+web后端：
+Web框架：
+vue，jquery，bootstrap
+
+flask：
+django：
+tornado:
+
+搭建框架:
+1.要有虚拟环境:
+ linux: virtualenv  virtualenvwrapper
+        配置文件的修改：  .Envs
+        .bashrc
+        ...
+
+
+ windows:pip install virtualenvwrapper-win
+         mkvirutalenv mytest1  新建虚拟环境
+         workon 虚拟环境名
+         deactivate  退出虚拟环境
+         rmvirutalenv 虚拟环境名
+
+2. 新建虚拟环境：
+   将项目切换到虚拟环境上
+
+   点击终端:(flaskenv) C:\Users\running\Desktop\GPDay41\代码\day41_flask>
+   说明进入到虚拟环境中....
+
+3.flask环境搭建：
+
+app=  Flask(__name__)
+
+1.关联服务器并启动
+  app.run(host='',port=5000)
+
+  在终端： python app.py
+2. app.route('/')  注册路由
+   def func():
+      return .....
+
+
+配置：
+Environment: production
+ production   ----》 正在
+ development  ---》开发
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+
+debug mode:on
+
+run(deubg=True)  ----> mode:on
+on的模式： 代码有改变则服务器重启（重新加载程序）
+
+解耦：
+settings.py:
+    ENV = 'development'
+    DEBUG = True
+在app启动前引入文件(两种)：
+    1. app.config.from_object(settings)
+    2. app.config.from_pyfile('settings.py')
+
+
+二部分：
+路由和请求request，响应response
+flask是基于Werkzeug工具包的一个web服务框架，所以flask里视图函数的实现，实际上是对werkzeug的一层封装
+
+路由结合视图函数
+    @app.route('/')
+    def hello_world():  # ---->视图函数
+        return 'HELLO hello world!hello kitty!'
+
+
+    @app.route('/abc',endpoint='abc1')
+    def show_abc():
+        return '<h1>abc</h1>'
+
+        # route就是将函数与add_url_rule进行了装饰
+        def show_name():
+            return '千锋教育'
+
+
+        app.add_url_rule('/name', view_func=show_name)
+路径（路由）的变量规则：
+   转换器：
+         str 默认
+         int  整型
+         float 浮点型
+         path  类似str，但是可以识别'/'
+         uuid  识别uuid类型的字符串
+
+   @app.route('/news/<int:num>')   ----><int:num>表示的就是一个变量
+
+
+@app.route('rule',endpoint='value')
+def func():
+    pass
+
+url_for('endpoint')  -----------> 根据endpoint找到路由rule
+
+
+请求:request
+from flask import request
+  client 发出的请求
+
+  request对象   只要有请求则会产生一个request对象
+
+  request.method  获取请求的方式
+  request.args.get('key',默认值)    ----> get
+  request.form.get('key',默认值)    ----> post
+  request.values ----> [dictA,dictB]  dictA---GET   dictB--POST
+  request.get_json()  application/json 类型数据
+  request.get_data()  将数据构成一个字节字符串
+
+  request.remote_addr  获取远程的ip地址
+    print(request.path)  # /
+    print(request.full_path)  # /?name=admin
+    print(request.url)  # http://127.0.0.1:5000/?name=admin
+    print(request.base_url)  # http://127.0.0.1:5000/
+    print(request.url_root)
+    print(request.method)  # 'GET'
+    print(request.query_string)  # b'name=admin'
+
+响应:
+    response
+
+   在视图函数的返回值后面可以跟：
+   1.string   系统会自动将str转成一个response对象
+   2.make_reponse( ) 构建response对象，可以给response对象添加一些头部信息
+   3.jsonify(datas)  将datas转成json的格式  dict默认使用此函数
+   4.render_template()
+   5.redirect()

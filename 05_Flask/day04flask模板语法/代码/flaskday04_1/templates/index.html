@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+    首页
+{% endblock %}
+{% block mycss %}
+    <style>
+        #middle{
+            background-color: deeppink;
+            color: white;
+            font-weight: bold;
+        }
+        .div1{
+            width: 33%;
+            height: 500px;
+            float: left;
+            border: 1px solid red;
+        }
+    </style>
+{#   /static/<filename> #}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+{% endblock %}
+
+{% block myjs %}
+    <script>
+            btn = document.getElementById('btn')
+            btn.onclick=function(){
+                alert('别点我啊！')
+            }
+    </script>
+{% endblock %}
+
+{% block middle %}
+    <div class="div1" id="d1"> </div>
+    <div class="div1"> </div>
+    <div class="div1"> </div>
+    <img src="{{ url_for('static',filename='images/a1.png') }}" alt="">
+{% endblock %}
+
+

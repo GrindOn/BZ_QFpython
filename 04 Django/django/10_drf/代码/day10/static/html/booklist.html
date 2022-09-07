@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="content">
+
+</div>
+</body>
+</html>
+<script>
+    $.get("/book/info/",function (data) {
+        console.log(data)
+        for (i in data){
+
+            $("#content").append("<p>"+ data[i].btitle + "</p>")
+        }
+    })
+</script>

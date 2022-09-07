@@ -1,0 +1,9 @@
+双击 shift 会弹出全局搜索功能   JetBrains开发的工具很多都有这个功能
+关闭:双击shift打开全局搜索功能 --> actions --> registry
+找到 ide.suppress.double.click.handler 选项，勾选
+
+
+快速格式化代码   ctrl+alt+l
+快速复制粘贴选中的代码  ctrl+d
+移动一行代码   alt/ctrl + shift + 上下箭头
+ctrl + / 打开/关闭注释

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户页面</title>
+</head>
+<body>
+<form action="" method="post">
+    {{ uform.csrf_token }}
+    <p>{{ uform.name }}</p>
+    <p>{{ uform.password }}</p>
+    <p><input type="submit" value="提交"></p>
+</form>
+</body>
+</html>

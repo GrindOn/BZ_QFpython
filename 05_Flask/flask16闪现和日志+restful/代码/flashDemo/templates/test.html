@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style>
+        .info {
+            color: deepskyblue;
+        }
+
+        .warning {
+            color: orange;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>类属性和对象属性 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter08.html" />
+    
+    
+    <link rel="prev" href="./chapter06.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="7"
+        data-chapter-title="类属性和对象属性"
+        data-filepath="chapter07.md"
+        data-basepath="."
+        data-revision="Wed Feb 19 2020 00:43:01 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        面向对象介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        类和对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        面向对象基本语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        魔法方法1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        魔法方法2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        内置属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        类属性和对象属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        私有属性和方法
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x3001;&#x7C7B;&#x5C5E;&#x6027;">&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x3001;&#x7C7B;&#x5C5E;&#x6027;</h2>
+<p>&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x7C7B;&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x5B9E;&#x4F8B;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x7C7B;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5462;&#xFF1F;</p>
+<h3 id="&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;">&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;</h3>
+<p>&#x901A;&#x8FC7;&#x7C7B;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x88AB;&#x79F0;&#x4E3A; <strong>&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x53C8;&#x79F0;&#x4E3A;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#xFF0C;&#x8BB0;&#x5F55;&#x5BF9;&#x8C61;&#x5404;&#x81EA;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x540C;&#x5BF9;&#x8C61;&#x7684;&#x540C;&#x540D;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#xFF0C;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E;&#x5404;&#x81EA;&#x72EC;&#x7ACB;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name,age)</span>:</span>
+        <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x7684;name&#x548C;age&#x90FD;&#x5C5E;&#x4E8E;&#x662F;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;</span>
+        self.name = name
+        self.age = age
+
+<span class="hljs-comment"># &#x6BCF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5C31;&#x6709;&#x81EA;&#x5DF1;&#x7684;name&#x548C;age&#x5C5E;&#x6027;</span>
+p1 = Person(<span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>,<span class="hljs-number">18</span>)
+p2 = Person(<span class="hljs-string">&quot;&#x674E;&#x56DB;&quot;</span>,<span class="hljs-number">20</span>)
+</code></pre>
+<h3 id="&#x7C7B;&#x5C5E;&#x6027;">&#x7C7B;&#x5C5E;&#x6027;</h3>
+<p>&#x7C7B;&#x5C5E;&#x6027;&#x5C31;&#x662F;&#x7C7B;&#x5BF9;&#x8C61;&#x6240;&#x62E5;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x88AB;&#x8BE5;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x6240;&#x5171;&#x6709;&#xFF0C;<span style="color:red">&#x7C7B;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7C7B;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x8BBF;&#x95EE;&#x3002;</span></p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span>:</span>
+    type = <span class="hljs-string">&quot;&#x72D7;&quot;</span>  <span class="hljs-comment"># &#x7C7B;&#x5C5E;&#x6027;</span>
+
+dog1 = Dog()
+dog2 = Dog()
+
+<span class="hljs-comment"># &#x4E0D;&#x7BA1;&#x662F;dog1&#x3001;dog2&#x8FD8;&#x662F;Dog&#x7C7B;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;type&#x5C5E;&#x6027;</span>
+print(Dog.type)  <span class="hljs-comment"># &#x7ED3;&#x679C;&#xFF1A;&#x72D7;</span>
+print(dog1.type)  <span class="hljs-comment"># &#x7ED3;&#x679C;&#xFF1A;&#x72D7;</span>
+print(dog2.type)  <span class="hljs-comment"># &#x7ED3;&#x679C;&#xFF1A;&#x72D7;</span>
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;">&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;</h3>
+<ol>
+<li>&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x8BB0;&#x5F55;&#x7684;&#x67D0;&#x9879;&#x6570;&#x636E;&#x59CB;&#x7EC8;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x65F6;&#xFF0C;&#x5219;&#x5B9A;&#x4E49;&#x7C7B;&#x5C5E;&#x6027;&#x3002;</li>
+<li>/&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x8981;&#x6C42;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x4E3A;&#x5176;&#x5355;&#x72EC;&#x5F00;&#x8F9F;&#x4E00;&#x4EFD;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x6765;&#x8BB0;&#x5F55;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x7C7B;&#x5C5E;&#x6027;&#x4E3A;&#x5168;&#x7C7B;&#x6240;&#x5171;&#x6709; &#xFF0C;&#x4EC5;&#x5360;&#x7528;&#x4E00;&#x4EFD;&#x5185;&#x5B58;&#xFF0C;&#x66F4;&#x52A0;&#x8282;&#x7701;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x3002;</li>
+</ol>
+<h3 id="&#x6CE8;&#x610F;&#x70B9;&#xFF1A;">&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</h3>
+<p>1&gt; <strong>&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x7C7B;&#x5C5E;&#x6027;&#x548C;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x540C;&#x540D;</strong>&#x3002;&#x5982;&#x679C;&#x6709;&#x540C;&#x540D;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#xFF0C;<strong>&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4F1A;&#x4F18;&#x5148;&#x8BBF;&#x95EE;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;</strong>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span><span class="hljs-params">(object)</span>:</span>
+    type = <span class="hljs-string">&quot;&#x72D7;&quot;</span>  <span class="hljs-comment"># &#x7C7B;&#x5C5E;&#x6027;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.type = <span class="hljs-string">&quot;dog&quot;</span>  <span class="hljs-comment"># &#x5BF9;&#x8C61;&#x5C5E;&#x6027;</span>
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+dog1 = Dog()
+
+print(dog1.type)     <span class="hljs-comment"># &#x7ED3;&#x679C;&#x4E3A; &#x201C;dog&#x201D;   &#x7C7B;&#x5C5E;&#x6027;&#x548C;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x540C;&#x540D;&#xFF0C;&#x4F7F;&#x7528; &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61; &#x8BBF;&#x95EE;&#x7684;&#x662F; &#x5B9E;&#x4F8B;&#x5C5E;&#x6027;</span>
+</code></pre>
+<p>2&gt; <strong>&#x7C7B;&#x5C5E;&#x6027;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x7C7B;&#x5BF9;&#x8C61;&#x4FEE;&#x6539;&#xFF0C;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4FEE;&#x6539;</strong></p>
+<pre><code class="lang-python">lass Dog(object):
+    type = <span class="hljs-string">&quot;&#x72D7;&quot;</span>  <span class="hljs-comment"># &#x7C7B;&#x5C5E;&#x6027;</span>
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+dog1 = Dog()
+dog1.type = <span class="hljs-string">&quot;dog&quot;</span>   <span class="hljs-comment"># &#x4F7F;&#x7528; &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61; &#x521B;&#x5EFA;&#x4E86;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;type</span>
+
+print(dog1.type)     <span class="hljs-comment"># &#x7ED3;&#x679C;&#x4E3A; &#x201C;dog&#x201D;   &#x7C7B;&#x5C5E;&#x6027;&#x548C;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x540C;&#x540D;&#xFF0C;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;</span>
+print(Dog.type)      <span class="hljs-comment"># &#x7ED3;&#x679C;&#x4E3A; &quot;&#x72D7;&quot;   &#x8BBF;&#x95EE;&#x7C7B;&#x5C5E;&#x6027;</span>
+
+<span class="hljs-comment"># &#x53EA;&#x6709;&#x4F7F;&#x7528;&#x7C7B;&#x540D;&#x624D;&#x80FD;&#x4FEE;&#x6539;&#x7C7B;&#x5C5E;&#x6027;</span>
+Dog.type = <span class="hljs-string">&quot;&#x571F;&#x72D7;&quot;</span>
+print(Dog.type)  <span class="hljs-comment"># &#x571F;&#x72D7;</span>
+dog2 = Dog()
+print(dog2.type)  <span class="hljs-comment"># &#x571F;&#x72D7;</span>
+</code></pre>
+<p>3&gt; <strong>&#x7C7B;&#x5C5E;&#x6027;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x79C1;&#x6709;</strong>&#xFF0C;&#x524D;&#x8FB9;&#x6DFB;&#x52A0;&#x4E24;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#x3002; &#x5982;:</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span><span class="hljs-params">(object)</span>:</span>
+    count = <span class="hljs-number">0</span>  <span class="hljs-comment"># &#x516C;&#x6709;&#x7684;&#x7C7B;&#x5C5E;&#x6027;</span>
+    __type = <span class="hljs-string">&quot;&#x72D7;&quot;</span>  <span class="hljs-comment"># &#x79C1;&#x6709;&#x7684;&#x7C7B;&#x5C5E;&#x6027;</span>
+
+print(Dog.count)       <span class="hljs-comment"># &#x6B63;&#x786E;</span>
+print(Dog.__type)      <span class="hljs-comment"># &#x9519;&#x8BEF;,&#x79C1;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x5916;&#x90E8;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x3002;</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter06.html" class="navigation navigation-prev " aria-label="Previous page: 内置属性"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter08.html" class="navigation navigation-next " aria-label="Next page: 私有属性和方法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

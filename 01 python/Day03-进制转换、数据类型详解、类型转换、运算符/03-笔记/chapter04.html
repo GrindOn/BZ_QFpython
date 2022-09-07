@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>赋值运算符 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter05.html" />
+    
+    
+    <link rel="prev" href="./chapter03.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="4"
+        data-chapter-title="赋值运算符"
+        data-filepath="chapter04.md"
+        data-basepath="."
+        data-revision="Mon Feb 03 2020 12:30:22 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        整数类型操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        数据类型转换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        算数运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        赋值运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        比较运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        逻辑运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        位运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        运算符优先级
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;">&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<ul>
+<li>&#x57FA;&#x672C;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</li>
+</ul>
+<table style="text-aligin:center">
+<tr><th>&#x8FD0;&#x7B97;&#x7B26;</th><th>&#x63CF;&#x8FF0;</th><th>&#x5B9E;&#x4F8B;</th></tr>
+<tr><td>=</td><td>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>&#x628A; = &#x53F7;&#x53F3;&#x8FB9;&#x7684;&#x7ED3;&#x679C; &#x8D4B;&#x7ED9; &#x5DE6;&#x8FB9;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5982; num = 1 + 2 * 3&#xFF0C;&#x7ED3;&#x679C;num&#x7684;&#x503C;&#x4E3A;7</td></tr>
+</table>
+
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5355;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>num = <span class="hljs-number">10</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>num
+<span class="hljs-number">10</span>
+
+<span class="hljs-comment"># &#x540C;&#x65F6;&#x4E3A;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;(&#x4F7F;&#x7528;&#x7B49;&#x53F7;&#x8FDE;&#x63A5;)</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a = b = <span class="hljs-number">4</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+<span class="hljs-number">4</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>b
+<span class="hljs-number">4</span>
+&gt;&gt;&gt;
+
+<span class="hljs-comment"># &#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;(&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;)</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>num1, f1, str1 = <span class="hljs-number">100</span>, <span class="hljs-number">3.14</span>, <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>num1
+<span class="hljs-number">100</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>f1
+<span class="hljs-number">3.14</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>str1
+<span class="hljs-string">&quot;hello&quot;</span>
+
+<span class="hljs-comment"># &#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x503C;&#x7684;&#x4E2A;&#x6570;&#x8D85;&#x8FC7;&#x53D8;&#x91CF;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x8D4B;&#x503C;&#x5931;&#x8D25;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>num1,num2=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+Traceback (most recent call last):
+  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+ValueError: too many values to unpack (expected <span class="hljs-number">2</span>)
+
+<span class="hljs-comment"># &#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x4E2A;&#x6570;&#x8D85;&#x8FC7;&#x503C;&#x5F97;&#x4E2A;&#x6570;&#xFF0C;&#x8D4B;&#x503C;&#x5931;&#x8D25;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>num1,num2,num3,num4=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+Traceback (most recent call last):
+  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+ValueError: <span class="hljs-keyword">not</span> enough values to unpack (expected <span class="hljs-number">4</span>, got <span class="hljs-number">3</span>)
+</code></pre>
+<ul>
+<li>&#x590D;&#x5408;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</li>
+</ul>
+<table style="text-align:center">
+<tr><th>&#x8FD0;&#x7B97;&#x7B26;</th><th>&#x63CF;&#x8FF0;</th><th>&#x5B9E;&#x4F8B;</th></tr>
+<tr><td>+=</td><td>&#x52A0;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c += a &#x7B49;&#x6548;&#x4E8E; c = c + a</td></tr>
+<tr><td>-=</td><td>&#x51CF;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c -= a &#x7B49;&#x6548;&#x4E8E; c = c - a</td></tr>
+<tr><td>*=</td><td>&#x4E58;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c *= a &#x7B49;&#x6548;&#x4E8E; c = c * a
+</td></tr>
+<tr><td>/=</td><td>&#x9664;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c /= a &#x7B49;&#x6548;&#x4E8E; c = c / a</td></tr>
+<tr><td>//=</td><td>&#x53D6;&#x6574;&#x9664;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c //= a &#x7B49;&#x6548;&#x4E8E; c = c // a</td></tr>
+<tr><td>%=</td><td>&#x53D6;&#x6A21;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c %= a &#x7B49;&#x6548;&#x4E8E; c = c % a</td></tr>
+<tr><td>**=</td><td>&#x5E42;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td><td>c **= a &#x7B49;&#x6548;&#x4E8E; c = c ** a</td></tr>
+</table>
+
+<pre><code class="lang-python"><span class="hljs-comment"># &#x793A;&#x4F8B;&#xFF1A;+=</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a = <span class="hljs-number">100</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a += <span class="hljs-number">1</span>  <span class="hljs-comment"># &#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C; a = a + 1</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+<span class="hljs-number">101</span>
+
+<span class="hljs-comment"># &#x793A;&#x4F8B;&#xFF1A;*=</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a = <span class="hljs-number">100</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a *= <span class="hljs-number">2</span>  <span class="hljs-comment"># &#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C; a = a * 2</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+<span class="hljs-number">200</span>
+
+<span class="hljs-comment"># &#x793A;&#x4F8B;&#xFF1A;*=&#xFF0C;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x7B26;&#x53F7;&#x53F3;&#x4FA7;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5148;&#x8BA1;&#x7B97;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x518D;&#x4E0E;&#x5DE6;&#x8FB9;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x8FD0;&#x7B97;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a = <span class="hljs-number">100</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a *= <span class="hljs-number">1</span> + <span class="hljs-number">2</span>  <span class="hljs-comment"># &#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C; a = a * (1+2)</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+<span class="hljs-number">300</span>
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x662F;&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;&#x8FD0;&#x7B97;&#xFF0C;&#x5C06;&#x7B49;&#x53F7;&#x53F3;&#x8FB9;&#x7684;&#x503C;&#x8D4B;&#x503C;&#x7ED9;&#x7B49;&#x53F7;&#x5DE6;&#x8FB9;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;<span style="color:red;font-weight:700">&#x7B49;&#x53F7;&#x7684;&#x5DE6;&#x8FB9;&#x4E00;&#x5B9A;&#x4E0D;&#x80FD;&#x662F;&#x5E38;&#x91CF;&#x6216;&#x8005;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</span></p>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter03.html" class="navigation navigation-prev " aria-label="Previous page: 算数运算符"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter05.html" class="navigation navigation-next " aria-label="Next page: 比较运算符"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

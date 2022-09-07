@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}
+    用户中心
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/center.css') }}">
+{% endblock %}
+{% block newcontent %}
+    <div id="container">
+        <div id="left">
+            <p>用户信息修改</p>
+            <p>发表文章</p>
+            <p>管理相册</p>
+            <p>管理留言</p>
+            <p>关于我设置</p>
+        </div>
+        <div id="right">
+            <div class="right1">
+                <h2> 用户信息修改</h2>
+                <form action="{{ url_for('user.user_change') }}" method="post" enctype="multipart/form-data">
+                    <p><input type="text" class="form-control" id="InputUsername" name="username"
+                              value="{{ g.user.username }}">
+                    </p>
+                    <p><input type="text" class="form-control" id="InputPhone" name="phone"
+                              value="{{ g.user.phone }}"><span></span>
+                    </p>
+                    <p><input type="email" class="form-control" id="InputEmail1" name="email"
+                              value="{{ g.user.email }}">
+                    </p>
+                    <p><input type="file" id="exampleInputFile" name="icon"></p>
+                    <p>
+                        <img src="{% if g.user.icon %} {{ url_for('static',filename=user.icon) }} {% else %}{{ url_for('static',filename='images/touxiang.jpg') }}{% endif %}"
+                             alt="" width="90"
+                             height="100">
+                    </p>
+                    <p>
+                        <button type="submit" class="btn btn-primary">用户信息修改</button>
+                    </p>
+
+                </form>
+            </div>
+            <div class="right1" style="padding-top: 20px">
+                <form action="{{ url_for('article.publish_article') }}" method="post">
+                    <p><input type="text" class="form-control" id="InputTitle" name="title"
+                              placeholder="请输入文章标题">
+                    </p>
+                    <p>
+                        <select name="type" class="form-control">
+                            <option value="0">请选择文章分类</option>
+                            {% for type in types %}
+                                <option value="{{ type.id }}">{{ type.type_name }}</option>
+                            {% endfor %}
+
+                        </select>
+                    </p>
+                    <p>
+                        <textarea name="content" class="mytextarea">
+
+                        </textarea>
+                    </p>
+                    <p></p>
+                    <p style="text-align: right;">
+                        <button type="submit" class="btn btn-primary">发表文章</button>
+                    </p>
+
+                </form>
+            </div>
+            <div class="right1" style="background-color: #00ff80"></div>
+            <div class="right1" style="background-color: darkgreen"></div>
+            <div class="right1" style="padding-top: 30px">
+                <form action="{{ url_for('user.user_change') }}" method="post" enctype="multipart/form-data">
+                    <p>
+                        <textarea name="content" class="mytextarea">
+
+                        </textarea>
+                    </p>
+                    <p></p>
+                    <p style="text-align: right;">
+                        <button type="submit" class="btn btn-primary">更改我的</button>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static',filename='tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/center.js') }}"></script>
+{% endblock %}

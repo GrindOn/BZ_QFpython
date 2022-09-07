@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#  不可以使用小括号  #}
+{# 构造复杂条件需要if嵌套   #}
+{% if num < 10 %}
+    <p>武汉加油</p>
+{% elif num < 20 %}
+    <p>中国加油</p>
+{% else %}
+    <p>世界加油</p>
+{% endif %}
+
+<p>
+    {% for value in l1 %}
+        <li>{{ value }}</li>
+    {% empty %}
+        数据不存在
+    {% endfor %}
+</p>
+{#<p>#}
+{#       {% for value in l1 reversed %}#}
+{#        <li>{{ forloop.counter0 }}--{{ value }}</li>#}
+{#    {% empty %}#}
+{#        数据不存在#}
+{#    {% endfor %}#}
+{#</p>#}
+
+</body>
+</html>

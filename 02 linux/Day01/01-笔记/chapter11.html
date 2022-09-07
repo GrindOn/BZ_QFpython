@@ -1,0 +1,579 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Linux -->
+<!-- Start book Linux -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>虚拟环境管理 | Linux</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter12.html" />
+    
+    
+    <link rel="prev" href="./chapter10.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="11"
+        data-chapter-title="虚拟环境管理"
+        data-filepath="chapter11.md"
+        data-basepath="."
+        data-revision="Sun Mar 08 2020 20:55:11 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Linux入门
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01/section01.html">
+            
+                
+                    <a href="./01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        操作系统介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01/section02.html">
+            
+                
+                    <a href="./01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Linux系统介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01/section03.html">
+            
+                
+                    <a href="./01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Linux启动流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01/section04.html">
+            
+                
+                    <a href="./01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        远程连接Linux
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        软件安装相关指令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        文件系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        vim编辑器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        目录操作的常见指令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        用户管理相关指令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        权限管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        压缩解压命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter09.html">
+            
+                
+                    <a href="./chapter09.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Nginx的安装和配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="chapter10.html">
+            
+                
+                    <a href="./chapter10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        安装Python
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="11" data-path="chapter11.html">
+            
+                
+                    <a href="./chapter11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        虚拟环境管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="chapter12.html">
+            
+                
+                    <a href="./chapter12.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        服务监听
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="chapter13.html">
+            
+                
+                    <a href="./chapter13.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        管道和重定向
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="chapter14.html">
+            
+                
+                    <a href="./chapter14.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Git的使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="14/section01.html">
+            
+                
+                    <a href="./14/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        git本地和远端管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="14/section02.html">
+            
+                
+                    <a href="./14/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        冲突的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.3" data-path="14/section03.html">
+            
+                
+                    <a href="./14/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.3.</b>
+                        
+                        分支操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.4" data-path="14/section04.html">
+            
+                
+                    <a href="./14/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.4.</b>
+                        
+                        远端服务器的SSH连接
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="chapter15.html">
+            
+                
+                    <a href="./chapter15.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        shell编程
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Linux</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7BA1;&#x7406;&#x865A;&#x62DF;&#x73AF;&#x5883;">&#x7BA1;&#x7406;&#x865A;&#x62DF;&#x73AF;&#x5883;</h2>
+<p>&#x548C;&#x5176;&#x4ED6;&#x5927;&#x591A;&#x6570;&#x73B0;&#x4EE3;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E00;&#x6837;&#xFF0C;Python&#x5BF9;&#x5305;&#x548C;&#x6A21;&#x5757;&#x7684;&#x4E0B;&#x8F7D;&#x3001;&#x5B58;&#x50A8;&#x4EE5;&#x53CA;&#x7BA1;&#x7406;&#x6709;&#x5176;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x5957;&#x65B9;&#x6CD5;&#x3002;Python&#x7684;&#x5305;&#x4E00;&#x822C;&#x5B58;&#x5728;&#x51E0;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x4F7F;&#x7528;<code>sys.path</code>&#x53EF;&#x4EE5;&#x67E5;&#x770B;python&#x5305;&#x548C;&#x6A21;&#x5757;&#x7684;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+print(sys.path)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">[<span class="hljs-string">&apos;&apos;</span>, 
+ <span class="hljs-string">&apos;/usr/lib/python36.zip&apos;</span>,
+ <span class="hljs-string">&apos;/usr/lib/python3.6&apos;</span>,
+ <span class="hljs-string">&apos;/usr/lib/python3.6/lib-dynload&apos;</span>,
+ <span class="hljs-string">&apos;/usr/local/lib/python3.6/dist-packages&apos;</span>,
+ <span class="hljs-string">&apos;/usr/lib/python3/dist-packages&apos;</span>
+]
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5217;&#x51FA;&#x4E86;python&#x91CC;&#x67E5;&#x627E;&#x5305;&#x6216;&#x8005;&#x6A21;&#x5757;&#x65F6;&#x7684;&#x6240;&#x6709;&#x53EF;&#x7528;&#x8DEF;&#x5F84;&#xFF0C;&#x5176;&#x4E2D;<code>&apos;&apos;</code>&#x8868;&#x793A;&#x7684;&#x662F;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x662F;&#x4F7F;&#x7528;<code>pip install</code>&#x6307;&#x4EE4;&#x4E0B;&#x8F7D;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x3002;&#x8FD9;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#x5305;&#x88AB;&#x5B58;&#x653E;&#x5728;&#x4E86;<code>&apos;/usr/local/lib/python3.6/dist-packages&apos;</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x5E26;&#x6765;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x540C;&#x65F6;&#x5F00;&#x53D1;&#x591A;&#x4E2A;&#x5DE5;&#x7A0B;&#x65F6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5DE5;&#x7A0B;&#x4F1A;&#x5C06;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x5305;&#x5B58;&#x653E;&#x5728;&#x76F8;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;&#x3002;&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;&#x5DE5;&#x7A0B;&#x4F9D;&#x8D56;&#x540C;&#x4E00;&#x4E2A;&#x5305;&#xFF0C;&#x4F46;&#x662F;&#x6240;&#x9700;&#x8981;&#x7684;&#x7248;&#x672C;&#x5374;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x6BD4;&#x5982;&#x5DE5;&#x7A0B;A&#x4F9D;&#x8D56;v1.0.0&#xFF0C;&#x800C;&#x5DE5;&#x7A0B;B&#x4F9D;&#x8D56;v2.0.0&#x3002;&#x7531;&#x4E8E;Python&#x65E0;&#x6CD5;&#x6839;&#x636E;&#x7248;&#x672C;&#x6765;&#x533A;&#x5206;&#x5305;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x7248;&#x672C;&#x51B2;&#x7A81;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;virtualenv">&#x5B89;&#x88C5;virtualenv</h3>
+<p>virtualenv &#x662F;&#x4E00;&#x4E2A;&#x521B;&#x5EFA;&#x9694;&#x7EDD;&#x7684;Python&#x73AF;&#x5883;&#x7684;&#x5DE5;&#x5177;&#x3002;virtualenv&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6240;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7528;&#x6765;&#x4F7F;&#x7528;Python&#x5DE5;&#x7A0B;&#x6240;&#x9700;&#x7684;&#x5305;&#x3002;</p>
+<pre><code class="lang-shell">sudo pip install virtualenv
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x5FEB;&#x901F;&#x7684;&#x521B;&#x5EFA;&#x3001;&#x6FC0;&#x6D3B;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x3002;</p>
+<pre><code class="lang-shell">cd my_project  # &#x8FDB;&#x5165;&#x5230;&#x5DE5;&#x7A0B;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+virtualenv test  # &#x521B;&#x5EFA;&#x865A;&#x62DF;&#x73AF;&#x5883;&#xFF0C;&#x5E76;&#x547D;&#x540D;&#x4E3A;test.&#x6B64;&#x65F6;&#x4F1A;&#x5728;my_project&#x4E0B;&#x591A;&#x51FA;&#x4E00;&#x4E2A;test&#x7684;&#x6587;&#x4EF6;&#x5939;
+source test/bin/activate # &#x6FC0;&#x6D3B;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;pip install&#x5B89;&#x88C5;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x90FD;&#x4F1A;&#x88AB;&#x5B89;&#x88C5;&#x5230;&#x5F53;&#x524D;&#x865A;&#x62DF;&#x73AF;&#x5883;
+pip install flask  # &#x6D4B;&#x8BD5;&#x5B89;&#x88C5;flask. flask&#x4F1A;&#x88AB;&#x5B89;&#x88C5;&#x5230;&#x5F53;&#x524D;&#x865A;&#x62DF;&#x73AF;&#x5883;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5168;&#x5C40;&#x73AF;&#x5883;
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;virtualenvwrapper">&#x5B89;&#x88C5;virtualenvwrapper</h3>
+<p>&#x5B89;&#x88C5;virtualenv&#x4EE5;&#x540E;&#xFF0C;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x548C;&#x6FC0;&#x6D3B;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5374;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x7684;&#x65B9;&#x4FBF;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;virtualenvwrapper&#x5DE5;&#x5177;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x7684;&#x5E2E;&#x6211;&#x4EEC;&#x7BA1;&#x7406;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x3002;</p>
+<pre><code class="lang-shell">sudo pip install virtualenvwrapper
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x5728;~/.bashrc&#x6587;&#x4EF6;&#x4E0B;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-python">export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=~/.envs
+source /usr/local/bin/virtualenvwrapper.sh
+</code></pre>
+<p>&#x4FDD;&#x5B58;&#x4EE5;&#x540E;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;:</p>
+<pre><code class="lang-shell">source ~/.bashrc
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x7BA1;&#x7406;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x4E86;&#x3002;</p>
+<pre><code class="lang-shell">mkvirtualenv test  # &#x521B;&#x5EFA;&#x5E76;&#x5207;&#x6362;&#x5230;test&#x865A;&#x62DF;&#x73AF;&#x5883;
+deactivate  # &#x79BB;&#x5F00;test&#x865A;&#x62DF;&#x73AF;&#x5883;
+rmvirtualenv test # &#x5220;&#x9664;test&#x865A;&#x62DF;&#x73AF;&#x5883;
+workon demo # &#x5207;&#x6362;&#x5230;demo&#x865A;&#x62DF;&#x73AF;&#x5883;
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter10.html" class="navigation navigation-prev " aria-label="Previous page: 安装Python"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter12.html" class="navigation navigation-next " aria-label="Next page: 服务监听"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Linux -->
+<!-- End of book Linux -->
+</html>

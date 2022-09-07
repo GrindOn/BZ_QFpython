@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'App:yzm' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="yzm"> <img src="{{ image_url }}" alt=""> <br>
+    <input type="hidden" name="code" value="{{ new_key }}">
+    <input type="submit">
+</form>
+
+</body>
+</html>

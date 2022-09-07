@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% block title %}
+    文章详情
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        #container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #detail {
+            background-color: rgba(232, 243, 242, 0.6);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px 50px;
+        }
+
+        #detail h2 {
+            text-align: center;
+        }
+
+        #detail h2 + div {
+            height: 30px;
+            line-height: 30px;
+        }
+
+
+        .item {
+            overflow: auto;
+            border-bottom: 1px solid lightgray;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        #item_left {
+            float: left;
+            width: 10%;
+            text-align: center;
+        }
+
+        #item_left img {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        #item_right {
+            float: right;
+            width: 90%;
+        }
+
+    </style>
+{% endblock %}
+{% block newcontent %}
+    <div id="container">
+        <div id="detail">
+            <div id="comment">
+                <p>用户留言:</p>
+                <div>
+                    <form action="{{ url_for('user.show_board') }}" method="post">
+                        <p>
+                    <textarea name="board" class="form-control" style="width: 60%" rows="5" cols="60">写下你想说的，开始我们的对话
+                    </textarea>
+                        </p>
+                        <p><input type="submit" value="发表留言" class="btn btn-info"></p>
+                    </form>
+                </div>
+                <p style="margin: 20px 5px; border-bottom: 1px solid lightgray">
+
+                </p>
+                <div id="comment_item">
+                    {% if boards %}
+                        {% for board in boards.items %}
+                            <div class="item">
+                                <div id="item_left">
+                                    <img src=" {% if board.user.icon %}
+
+                                        {{ url_for('static',filename=board.user.icon) }}{% else %}{{ url_for('static',filename='images/touxiang.jpg') }} {% endif %}"
+                                         alt="">
+                                </div>
+                                <div id="item_right">
+                                    <p>
+                                        <span>{% if not board.user_id %} 匿名用户 {% else %}
+                                            {{ board.user.username }}{% endif %} </span>
+                                        <span>{{ board.mdatetime }}</span>
+                                    </p>
+                                    <p>
+                                        {{ board.content }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+
+                    {% else %}
+                        还没有任何的留言，赶快发表吧！
+                    {% endif %}
+                </div>
+                <div id="paginate">
+                    <nav aria-label="...">
+                        <ul class="pager">
+                            <li class="previous {% if not boards.has_prev %}disabled {% endif %}"><a
+                                    href="{{url_for('user.show_board')}}?page={{ boards.prev_num }}"><span
+                                    aria-hidden="true">&larr;</span> 上一页</a></li>
+
+                            <li class="next {% if not boards.has_next %}disabled {% endif %}"><a href="{{url_for('user.show_board')}}?page={{ boards.next_num }}">下一页
+                                <span aria-hidden="true">&rarr;</span></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $(function () {
+            //文本域
+            $('textarea[name="comment"]').focus(function () {
+                $(this).val("")
+            })
+
+        })
+    </script>
+{% endblock %}

@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>WSGI接口 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter04.html" />
+    
+    
+    <link rel="prev" href="./chapter02.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="WSGI接口"
+        data-filepath="chapter03.md"
+        data-basepath="."
+        data-revision="Thu Mar 05 2020 21:24:03 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        HTTP协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        手动搭建HTTP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        WSGI接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        新建WSGI服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        使用if管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        使用字典管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        使用装饰器管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        requests模块的介绍
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="wsgi&#x63A5;&#x53E3;">WSGI&#x63A5;&#x53E3;</h2>
+<p>WSGI&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5B83;&#x53EA;&#x8981;&#x6C42;Web&#x5F00;&#x53D1;&#x8005;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x54CD;&#x5E94;HTTP&#x8BF7;&#x6C42;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;Web&#x7248;&#x672C;&#x7684;&#x201C;Hello, web!&#x201D;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">application</span><span class="hljs-params">(environ, start_response)</span>:</span>
+    start_response(<span class="hljs-string">&apos;200 OK&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html&apos;</span>)])
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&lt;h1&gt;Hello, web!&lt;/h1&gt;&apos;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;<code>application()</code>&#x51FD;&#x6570;&#x5C31;&#x662F;&#x7B26;&#x5408;WSGI&#x6807;&#x51C6;&#x7684;&#x4E00;&#x4E2A;HTTP&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>environ&#xFF1A;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6240;&#x6709;HTTP&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x7684;<code>dict</code>&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>start_response&#xFF1A;&#x4E00;&#x4E2A;&#x53D1;&#x9001;HTTP&#x54CD;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<p>&#x5728;<code>application()</code>&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-python">start_response(<span class="hljs-string">&apos;200 OK&apos;</span>, [(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html&apos;</span>)])
+</code></pre>
+<p>&#x5C31;&#x53D1;&#x9001;&#x4E86;HTTP&#x54CD;&#x5E94;&#x7684;Header&#xFF0C;&#x6CE8;&#x610F;Header&#x53EA;&#x80FD;&#x53D1;&#x9001;&#x4E00;&#x6B21;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x80FD;&#x8C03;&#x7528;&#x4E00;&#x6B21;<code>start_response()</code>&#x51FD;&#x6570;&#x3002;<code>start_response()</code>&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;HTTP&#x54CD;&#x5E94;&#x7801;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x4E00;&#x7EC4;<code>list</code>&#x8868;&#x793A;&#x7684;HTTP Header&#xFF0C;&#x6BCF;&#x4E2A;Header&#x7528;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E24;&#x4E2A;<code>str</code>&#x7684;<code>tuple</code>&#x8868;&#x793A;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x5E94;&#x8BE5;&#x628A;<code>Content-Type</code>&#x5934;&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x3002;&#x5176;&#x4ED6;&#x5F88;&#x591A;&#x5E38;&#x7528;&#x7684;HTTP Header&#x4E5F;&#x5E94;&#x8BE5;&#x53D1;&#x9001;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;<code>&apos;&lt;h1&gt;Hello, web!&lt;/h1&gt;&apos;</code>&#x5C06;&#x4F5C;&#x4E3A;HTTP&#x54CD;&#x5E94;&#x7684;Body&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
+<p>&#x6709;&#x4E86;WSGI&#xFF0C;&#x6211;&#x4EEC;&#x5173;&#x5FC3;&#x7684;&#x5C31;&#x662F;&#x5982;&#x4F55;&#x4ECE;<code>environ</code>&#x8FD9;&#x4E2A;<code>dict</code>&#x5BF9;&#x8C61;&#x62FF;&#x5230;HTTP&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x6784;&#x9020;HTML&#xFF0C;&#x901A;&#x8FC7;<code>start_response()</code>&#x53D1;&#x9001;Header&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;Body&#x3002;</p>
+<p>&#x6574;&#x4E2A;<code>application()</code>&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x6D89;&#x53CA;&#x5230;&#x4EFB;&#x4F55;&#x89E3;&#x6790;HTTP&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5E95;&#x5C42;&#x4EE3;&#x7801;&#x4E0D;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8D1F;&#x8D23;&#x5728;&#x66F4;&#x9AD8;&#x5C42;&#x6B21;&#x4E0A;&#x8003;&#x8651;&#x5982;&#x4F55;&#x54CD;&#x5E94;&#x8BF7;&#x6C42;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x7B49;&#x7B49;&#xFF0C;&#x8FD9;&#x4E2A;<code>application()</code>&#x51FD;&#x6570;&#x600E;&#x4E48;&#x8C03;&#x7528;&#xFF1F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#xFF0C;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<code>environ</code>&#x548C;<code>start_response</code>&#x6211;&#x4EEC;&#x6CA1;&#x6CD5;&#x63D0;&#x4F9B;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;<code>str</code>&#x4E5F;&#x6CA1;&#x6CD5;&#x53D1;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
+<p>&#x6240;&#x4EE5;<code>application()</code>&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x7531;WSGI&#x670D;&#x52A1;&#x5668;&#x6765;&#x8C03;&#x7528;&#x3002;&#x6709;&#x5F88;&#x591A;&#x7B26;&#x5408;WSGI&#x89C4;&#x8303;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6311;&#x9009;&#x4E00;&#x4E2A;&#x6765;&#x7528;&#x3002;&#x4F46;&#x662F;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x5C3D;&#x5FEB;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x7684;<code>application()</code>&#x51FD;&#x6570;&#x771F;&#x7684;&#x53EF;&#x4EE5;&#x628A;HTML&#x8F93;&#x51FA;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x8981;&#x8D76;&#x7D27;&#x627E;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;WSGI&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x628A;&#x6211;&#x4EEC;&#x7684;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8DD1;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x597D;&#x6D88;&#x606F;&#x662F;Python&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;WSGI&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x53EB;wsgiref&#xFF0C;&#x5B83;&#x662F;&#x7528;&#x7EAF;Python&#x7F16;&#x5199;&#x7684;WSGI&#x670D;&#x52A1;&#x5668;&#x7684;&#x53C2;&#x8003;&#x5B9E;&#x73B0;&#x3002;&#x6240;&#x8C13;&#x201C;&#x53C2;&#x8003;&#x5B9E;&#x73B0;&#x201D;&#x662F;&#x6307;&#x8BE5;&#x5B9E;&#x73B0;&#x5B8C;&#x5168;&#x7B26;&#x5408;WSGI&#x6807;&#x51C6;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x8003;&#x8651;&#x4EFB;&#x4F55;&#x8FD0;&#x884C;&#x6548;&#x7387;&#xFF0C;&#x4EC5;&#x4F9B;&#x5F00;&#x53D1;&#x548C;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter02.html" class="navigation navigation-prev " aria-label="Previous page: 手动搭建HTTP服务器"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter04.html" class="navigation navigation-next " aria-label="Next page: 新建WSGI服务器"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>列表的复制 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="./chapter05.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="6"
+        data-chapter-title="列表的复制"
+        data-filepath="chapter06.md"
+        data-basepath="."
+        data-revision="Fri Feb 07 2020 10:06:55 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        列表的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        列表的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        列表的遍历
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        列表的嵌套
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        列表推导式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        列表的复制
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5217;&#x8868;&#x7684;&#x590D;&#x5236;">&#x5217;&#x8868;&#x7684;&#x590D;&#x5236;</h2>
+<p>&#x67E5;&#x770B;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x8BF4;&#x51FA;&#x6253;&#x5370;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code class="lang-python">a = <span class="hljs-number">12</span>
+b = a
+b = <span class="hljs-number">13</span>
+print(b)
+print(a)
+
+nums1 = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">12</span>]
+nums2 = nums1
+nums2[<span class="hljs-number">0</span>] = <span class="hljs-number">100</span>
+print(nums2)
+print(nums1)
+</code></pre>
+<p>&#x601D;&#x8003;&#xFF1A;</p>
+<ol>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x4FEE;&#x6539;&#x4E86; nums2&#x91CC;&#x7684;&#x6570;&#x636E;&#xFF0C;nums1&#x7684;&#x6570;&#x636E;&#x4E5F;&#x4F1A;&#x6539;&#x53D8;&#xFF1F;</li>
+</ol>
+<blockquote>
+<p> Python&#x4E2D;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x90FD;&#x662F;&#x5F15;&#x7528;(&#x5373;&#x5185;&#x5B58;&#x5730;&#x5740;)&#x7684;&#x4F20;&#x9012;&#x3002;&#x5BF9;&#x4E8E;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x6765;&#x8BF4;&#xFF0C;&#x4FEE;&#x6539;&#x539F;&#x6570;&#x636E;&#x7684;&#x503C;&#xFF0C;&#x4F1A;&#x6539;&#x53D8;&#x8D4B;&#x503C;&#x5BF9;&#x8C61;&#x7684;&#x503C;&#x3002;</p>
+</blockquote>
+<ol>
+<li>&#x600E;&#x6837;nums1&#x548C;nums2&#x53D8;&#x6210;&#x4E24;&#x4E2A;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x4E0D;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x5217;&#x8868;&#xFF1F;</li>
+</ol>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x5217;&#x8868;&#x7684; copy &#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005; copy &#x6A21;&#x5757;&#x5C31;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5217;&#x8868;&#x7684;copy&#x65B9;&#x6CD5;">&#x5217;&#x8868;&#x7684;copy&#x65B9;&#x6CD5;</h3>
+<p>&#x4F7F;&#x7528;&#x5217;&#x8868;&#x7684;copy&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x539F;&#x6765;&#x7684;&#x5217;&#x8868;&#x8FDB;&#x884C;&#x590D;&#x5236;&#xFF0C;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x79CD;&#x590D;&#x5236;&#x65B9;&#x5F0F;&#x662F;&#x6D45;&#x590D;&#x5236;&#x3002;</p>
+<pre><code class="lang-python">nums1 = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">12</span>]
+nums2 = nums1.copy()  <span class="hljs-comment"># &#x8C03;&#x7528;&#x5217;&#x8868;&#x7684;copy&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x590D;&#x5236;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5217;&#x8868;</span>
+
+nums2[<span class="hljs-number">0</span>] = <span class="hljs-number">100</span>
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;&#x65B0;&#x5217;&#x8868;&#x91CC;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x539F;&#x6709;&#x5217;&#x8868;&#x91CC;&#x7684;&#x6570;&#x636E;</span>
+print(nums2)
+print(nums1)
+</code></pre>
+<h3 id="copy&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;">copy&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;</h3>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x5217;&#x8868;&#x7684;copy&#x65B9;&#x6CD5;&#x4EE5;&#x5916;&#xFF0C;Python&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;copy&#x6A21;&#x5757;&#x6765;&#x590D;&#x5236;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;copy&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;&#x6D45;&#x590D;&#x5236;&#x548C;&#x6DF1;&#x590D;&#x5236;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x6267;&#x884C;&#x7684;&#x6548;&#x679C;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x5DEE;&#x5F02;&#x3002;</p>
+<h4 id="&#x6D45;&#x62F7;&#x8D1D;">&#x6D45;&#x62F7;&#x8D1D;</h4>
+<p>&#x6D45;&#x62F7;&#x8D1D;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x9876;&#x5C42;&#x62F7;&#x8D1D;&#xFF0C;&#x901A;&#x4FD7;&#x7684;&#x7406;&#x89E3;&#x662F;&#xFF1A;&#x62F7;&#x8D1D;&#x4E86;&#x5F15;&#x7528;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x62F7;&#x8D1D;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> copy
+
+words1 = [<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-string">&apos;good&apos;</span>, [<span class="hljs-string">&apos;yes&apos;</span>, <span class="hljs-string">&apos;ok&apos;</span>], <span class="hljs-string">&apos;bad&apos;</span>]
+
+<span class="hljs-comment"># &#x6D45;&#x62F7;&#x8D1D;&#x53EA;&#x4F1A;&#x62F7;&#x8D1D;&#x6700;&#x5916;&#x5C42;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x62F7;&#x8D1D;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x6307;&#x5411;</span>
+words2 = copy.copy(words1)
+
+words2[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+words2[<span class="hljs-number">2</span>][<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;no&apos;</span>
+
+print(words1)  <span class="hljs-comment"># [&apos;hello&apos;, &apos;good&apos;, [&apos;no&apos;, &apos;ok&apos;], &apos;bad&apos;]</span>
+<span class="hljs-comment"># wrods2 &#x91CC;&#x7684; yes &#x88AB;&#x4FEE;&#x6539;&#x6210;&#x4E86; no</span>
+print(words2)  <span class="hljs-comment"># [&apos;&#x4F60;&#x597D;&apos;, &apos;good&apos;, [&apos;no&apos;, &apos;ok&apos;], &apos;bad&apos;]</span>
+</code></pre>
+<h4 id="&#x6DF1;&#x62F7;&#x8D1D;">&#x6DF1;&#x62F7;&#x8D1D;</h4>
+<p>&#x6DF1;&#x62F7;&#x8D1D;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6240;&#x6709;&#x5C42;&#x6B21;&#x7684;&#x9012;&#x5F52;&#x62F7;&#x8D1D;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> copy
+
+words1 = [<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-string">&apos;good&apos;</span>, [<span class="hljs-string">&apos;yes&apos;</span>, <span class="hljs-string">&apos;ok&apos;</span>], <span class="hljs-string">&apos;bad&apos;</span>]
+
+<span class="hljs-comment"># &#x6DF1;&#x62F7;&#x8D1D;&#x4F1A;&#x5C06;&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x8FDB;&#x884C;&#x62F7;&#x8D1D;</span>
+words2 = copy.deepcopy(words1)
+
+words2[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+words2[<span class="hljs-number">2</span>][<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;no&apos;</span>
+
+print(words1)  <span class="hljs-comment"># [&apos;hello&apos;, &apos;good&apos;, [&apos;yes&apos;, &apos;ok&apos;], &apos;bad&apos;]</span>
+print(words2)  <span class="hljs-comment"># [&apos;&#x4F60;&#x597D;&apos;, &apos;good&apos;, [&apos;no&apos;, &apos;ok&apos;], &apos;bad&apos;]</span>
+</code></pre>
+<h4 id="&#x5207;&#x7247;">&#x5207;&#x7247;</h4>
+<p>&#x5217;&#x8868;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x5207;&#x7247;&#xFF0C;&#x5207;&#x7247;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x6D45;&#x62F7;&#x8D1D;&#x3002;</p>
+<pre><code class="lang-python">words1 = [<span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-string">&apos;good&apos;</span>, [<span class="hljs-string">&apos;yes&apos;</span>, <span class="hljs-string">&apos;ok&apos;</span>], <span class="hljs-string">&apos;bad&apos;</span>]
+words2 = words1[:]
+words2[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+words2[<span class="hljs-number">2</span>][<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;no&apos;</span>
+print(words1)  <span class="hljs-comment"># [&apos;hello&apos;, &apos;good&apos;, [&apos;no&apos;, &apos;ok&apos;], &apos;bad&apos;]</span>
+print(words2) <span class="hljs-comment"># [&apos;&#x4F60;&#x597D;&apos;, &apos;good&apos;, [&apos;no&apos;, &apos;ok&apos;], &apos;bad&apos;]</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter05.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 列表推导式"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

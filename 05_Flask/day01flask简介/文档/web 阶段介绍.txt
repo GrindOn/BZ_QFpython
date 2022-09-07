@@ -1,0 +1,65 @@
+web 阶段：
+python 基础
+数据库：mysql redis
+网页：html+css+js+jquery+bootstrap
+vue：前后分离
+
+web后端：网站
+
+联合项目：
+h5+python
+
+h5 展示 
+触发事件 -----》后端发请求 -----〉后端（处理）
+
+注册。登录
+
+用户名
+密码
+确认密码
+手机验证码
+
+
+flask  tornado  django
+
+flask 轻量级 灵活
+
+tornado c10k  
+
+django 重量级  
+
+
+flask：
+
+虚拟环境：
+
+company：
+pip install redis 
+python 
+
+app1: redis2.3, pymysql ....    -----> house1
+
+app2: pymsql,redis2.0,...   ------> house2
+
+app3: mongodb，xxx,.... 
+
+app4: house4 屋子是空的. ----> 进入workon 虚拟环境名
+
+(house4)d://..../pip install pymysql
+
+mkvirualenv house5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

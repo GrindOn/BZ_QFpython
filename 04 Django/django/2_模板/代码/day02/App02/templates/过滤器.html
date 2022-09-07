@@ -1,0 +1,29 @@
+{% load mytag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#  过滤器  #}
+{{ num|add:'10' }}
+<p>
+    {{ age|default_if_none:'你好' }}
+{#    如果变量不存在，就显示缺省值 #}
+    {{ age|default:'ok' }}
+</p>
+<p>
+    {{ t1|date:"Y-m-d H" }}
+</p>
+<p>
+    {% autoescape off %}
+    {{ content }}
+    {% endautoescape %}
+</p>
+{#  自定义过滤器  #}
+<p>
+    {{ 5|sub1 }}
+</p>
+</body>
+</html>

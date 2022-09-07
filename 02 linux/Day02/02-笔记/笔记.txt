@@ -1,0 +1,36 @@
+一、创建用户chris,设置密码，并把用户添加到root分组
+	1. 创建用户
+	sudo useradd chris -m -s /bin/bash
+	2. 设置密码
+	sudo passwd chris
+	3. 把用户添加到root分组
+	sudo gpasswd -a chirs root
+	4. 使用finallshell,用chris用户登录服务器。
+
+二、cd(change directory,修改目录):
+	1. ~ : 表示的是当前用户的家目录
+		当前用户的家目录: 普通用户是在  /home/用户名/
+						 root用户是在  /root/
+	2. - : 表示跳转到上一次的目录
+	3. ../ : 表示跳转到上一级目录
+	4. 空: 等价于 ~,表示跳转到当前用户的家目录
+
+三、pwd(print work directory,打印工作目录):看一下当前在哪个文件夹下执行命令
+
+四、 路径分为相对路径和绝对路径。
+	相对路径:相对于当前文件夹的路径。不以 / 开始就是相对路径
+		cd xxx   # 进入到当前文件夹里的 xxx 文件夹
+		cd ./xxx  # 等价于  cd xxx
+		cd ../xxx # 进入到上一级文件夹，再在这个文件夹里进入到 xxx
+
+	绝对路径:  以 / 开始的就是绝对路径
+		cd  /home/xxx   # 从根目录开始查找 home,进入到home里的 xxx
+
+五、 ls 命令列出文件和文件夹(不包含隐藏的文件和文件夹)
+	隐藏文件或者文件夹: 以 . 开头的文件或者文件夹时隐藏文件。
+
+	ls : 列出当前目录下的文件和文件夹
+	ls <path>: 列出指定目录天的文件和文件夹。
+	ls -a /home/chris : 列出 /home/chris/ 目录下所有的文件和文件夹，包括隐藏的
+	ls:命令   -a: 选项，可选的   /home/chris: 参数
+	命令，选项和参数之间使用空格隔开

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+{# 变量  #}
+{# 复杂类型的访问可以使用点，但不能使用下标    #}
+{{ num }}
+<p>
+    {{ name }}
+</p>
+<hr>
+<p>
+{#   --{{ students[1] }}  不能使用下标 #}
+    {{ students.0 }}----{{ students.3.0 }}
+</p>
+<p>
+    {{ student.name }}
+</p>
+</body>
+</html>

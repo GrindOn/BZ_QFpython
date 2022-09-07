@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>if语句嵌套 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../01/section05.html" />
+    
+    
+    <link rel="prev" href="../01/section03.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="1.4"
+        data-chapter-title="if语句嵌套"
+        data-filepath="01/section04.md"
+        data-basepath=".."
+        data-revision="Mon Feb 03 2020 14:44:53 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="../chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        条件判断语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01/section01.html">
+            
+                
+                    <a href="../01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        if语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01/section02.html">
+            
+                
+                    <a href="../01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        if...else语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01/section03.html">
+            
+                
+                    <a href="../01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        if...elif...else语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="01/section04.html">
+            
+                
+                    <a href="../01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        if语句嵌套
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="01/section05.html">
+            
+                
+                    <a href="../01/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        条件判断练习:猜拳游戏
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="01/section06.html">
+            
+                
+                    <a href="../01/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        条件判断语句补充
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="../chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        循环语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02/section01.html">
+            
+                
+                    <a href="../02/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        while语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02/section02.html">
+            
+                
+                    <a href="../02/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        for语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02/section03.html">
+            
+                
+                    <a href="../02/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        break和continue的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02/section04.html">
+            
+                
+                    <a href="../02/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        嵌套循环
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02/section05.html">
+            
+                
+                    <a href="../02/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        for...else语句的使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="if&#x5D4C;&#x5957;">if&#x5D4C;&#x5957;</h2>
+<p>&#x901A;&#x8FC7;&#x5B66;&#x4E60;if&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#xFF0C;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;</p>
+<ul>
+<li>&#x5F53;&#x9700;&#x8981;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x53BB;&#x505A;&#x4E8B;&#x60C5;&#x7684;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x4F7F;&#x7528;if</li>
+<li>&#x5F53;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#x505A;&#x4E8B;&#x60C5;A&#xFF0C;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x505A;&#x4E8B;&#x60C5;B&#x7684;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4F7F;&#x7528;if-else</li>
+</ul>
+<p>&#x60F3;&#x4E00;&#x60F3;&#xFF1A;</p>
+<blockquote>
+<p>&#x5750;&#x706B;&#x8F66;&#x6216;&#x8005;&#x5730;&#x94C1;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x662F;&#xFF1A;&#x5148;&#x8FDB;&#x884C;&#x5B89;&#x68C0;&#x5982;&#x679C;&#x5B89;&#x68C0;&#x901A;&#x8FC7;&#x624D;&#x4F1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x8F66;&#x7968;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5148;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x8F66;&#x7968;&#x4E4B;&#x540E;&#x624D;&#x4F1A;&#x8FDB;&#x884C;&#x5B89;&#x68C0;&#xFF0C;&#x5373;&#x5B9E;&#x9645;&#x7684;&#x60C5;&#x51B5;&#x67D0;&#x4E2A;&#x5224;&#x65AD;&#x662F;&#x518D;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5224;&#x65AD;&#x6210;&#x7ACB;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x8BE5;&#x600E;&#x6837;&#x89E3;&#x51B3;&#x5462;&#xFF1F;</p>
+</blockquote>
+<p>&#x7B54;&#xFF1A;</p>
+<blockquote>
+<p>if&#x5D4C;&#x5957;</p>
+</blockquote>
+<h3 id="&#x4E00;&#x3001;if&#x5D4C;&#x5957;&#x7684;&#x683C;&#x5F0F;">&#x4E00;&#x3001;if&#x5D4C;&#x5957;&#x7684;&#x683C;&#x5F0F;</h3>
+<pre><code class="lang-python">    <span class="hljs-keyword">if</span> &#x6761;&#x4EF6;<span class="hljs-number">1</span>:
+
+        &#x6EE1;&#x8DB3;&#x6761;&#x4EF6;<span class="hljs-number">1</span> &#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">1</span>
+        &#x6EE1;&#x8DB3;&#x6761;&#x4EF6;<span class="hljs-number">1</span> &#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">2</span>
+
+        <span class="hljs-keyword">if</span> &#x6761;&#x4EF6;<span class="hljs-number">2</span>:
+            &#x6EE1;&#x8DB3;&#x6761;&#x4EF6;<span class="hljs-number">2</span> &#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">1</span>
+            &#x6EE1;&#x8DB3;&#x6761;&#x4EF6;<span class="hljs-number">2</span> &#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">2</span>
+</code></pre>
+<ul>
+<li>&#x8BF4;&#x660E;<ul>
+<li>&#x5916;&#x5C42;&#x7684;if&#x5224;&#x65AD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;if-else</li>
+<li>&#x5185;&#x5C42;&#x7684;if&#x5224;&#x65AD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;if-else</li>
+<li>&#x6839;&#x636E;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x8FDB;&#x884C;&#x9009;&#x62E9;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x4E8C;&#x3001;if&#x5D4C;&#x5957;&#x7684;&#x5E94;&#x7528;">&#x4E8C;&#x3001;if&#x5D4C;&#x5957;&#x7684;&#x5E94;&#x7528;</h3>
+<p>demo&#xFF1A;</p>
+<pre><code class="lang-python">ticket = <span class="hljs-number">1</span>     <span class="hljs-comment"># &#x7528;1&#x4EE3;&#x8868;&#x6709;&#x8F66;&#x7968;&#xFF0C;0&#x4EE3;&#x8868;&#x6CA1;&#x6709;&#x8F66;&#x7968;</span>
+knife_length = <span class="hljs-number">9</span>     <span class="hljs-comment"># &#x5200;&#x5B50;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;cm</span>
+
+<span class="hljs-keyword">if</span> ticket == <span class="hljs-number">1</span>:
+    print(<span class="hljs-string">&quot;&#x6709;&#x8F66;&#x7968;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x7AD9;&quot;</span>)
+    <span class="hljs-keyword">if</span> knife_length &lt; <span class="hljs-number">10</span>:
+        print(<span class="hljs-string">&quot;&#x901A;&#x8FC7;&#x5B89;&#x68C0;&quot;</span>)
+        print(<span class="hljs-string">&quot;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x89C1;&#x5230;Ta&#x4E86;&#xFF0C;&#x7F8E;&#x6ECB;&#x6ECB;~~~&quot;</span>)
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x901A;&#x8FC7;&#x5B89;&#x68C0;&quot;</span>)
+        print(<span class="hljs-string">&quot;&#x5200;&#x5B50;&#x7684;&#x957F;&#x5EA6;&#x8D85;&#x8FC7;&#x89C4;&#x5B9A;&#xFF0C;&#x7B49;&#x5F85;&#x8B66;&#x5BDF;&#x5904;&#x7406;...&quot;</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x8F66;&#x7968;&#xFF0C;&#x4E0D;&#x80FD;&#x8FDB;&#x7AD9;&quot;</span>)
+    print(<span class="hljs-string">&quot;&#x4EB2;&#x7231;&#x7684;&#xFF0C;&#x90A3;&#x5C31;&#x4E0B;&#x6B21;&#x89C1;&#x4E86;&quot;</span>)
+</code></pre>
+<p>&#x7ED3;&#x679C;1&#xFF1A;ticket = 1;knife_length = 9</p>
+<pre><code>    &#x6709;&#x8F66;&#x7968;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x7AD9;
+    &#x901A;&#x8FC7;&#x5B89;&#x68C0;
+    &#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x89C1;&#x5230;Ta&#x4E86;&#xFF0C;&#x7F8E;&#x6ECB;&#x6ECB;~~~
+</code></pre><p>&#x7ED3;&#x679C;2&#xFF1A;ticket = 1;knife_length = 20</p>
+<pre><code class="lang-c">    &#x6709;&#x8F66;&#x7968;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x7AD9;
+    &#x6CA1;&#x6709;&#x901A;&#x8FC7;&#x5B89;&#x68C0;
+    &#x5200;&#x5B50;&#x7684;&#x957F;&#x5EA6;&#x8D85;&#x8FC7;&#x89C4;&#x5B9A;&#xFF0C;&#x7B49;&#x5F85;&#x8B66;&#x5BDF;&#x5904;&#x7406;...
+</code></pre>
+<p>&#x7ED3;&#x679C;3&#xFF1A;ticket = 0;knife_length = 9</p>
+<pre><code>    &#x6CA1;&#x6709;&#x8F66;&#x7968;&#xFF0C;&#x4E0D;&#x80FD;&#x8FDB;&#x7AD9;
+    &#x4EB2;&#x7231;&#x7684;&#xFF0C;&#x90A3;&#x5C31;&#x4E0B;&#x6B21;&#x89C1;&#x4E86;
+</code></pre><p>&#x7ED3;&#x679C;4&#xFF1A;ticket = 0;knife_length = 20</p>
+<pre><code>    &#x6CA1;&#x6709;&#x8F66;&#x7968;&#xFF0C;&#x4E0D;&#x80FD;&#x8FDB;&#x7AD9;
+    &#x4EB2;&#x7231;&#x7684;&#xFF0C;&#x90A3;&#x5C31;&#x4E0B;&#x6B21;&#x89C1;&#x4E86;
+</code></pre><ul>
+<li>&#x60F3;&#x4E00;&#x60F3;:&#x4E3A;&#x4EC0;&#x4E48;&#x7ED3;&#x679C;3&#x548C;&#x7ED3;&#x679C;4&#x76F8;&#x540C;&#xFF1F;&#xFF1F;&#xFF1F;</li>
+</ul>
+<h3 id="&#x4E09;&#x3001;&#x7EC3;&#x4E00;&#x7EC3;">&#x4E09;&#x3001;&#x7EC3;&#x4E00;&#x7EC3;</h3>
+<p>&#x60C5;&#x8282;&#x63CF;&#x8FF0;&#xFF1A;&#x4E0A;&#x516C;&#x4EA4;&#x8F66;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x6709;&#x5EA7;&#x4F4D;&#x5750;&#x4E0B;</p>
+<p>&#x8981;&#x6C42;&#xFF1A;&#x8F93;&#x5165;&#x516C;&#x4EA4;&#x5361;&#x5F53;&#x524D;&#x7684;&#x4F59;&#x989D;&#xFF0C;&#x53EA;&#x8981;&#x8D85;&#x8FC7;2&#x5143;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4E0A;&#x516C;&#x4EA4;&#x8F66;&#xFF1B;&#x5982;&#x679C;&#x8F66;&#x4E0A;&#x6709;&#x7A7A;&#x5EA7;&#x4F4D;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5750;&#x4E0B;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../01/section03.html" class="navigation navigation-prev " aria-label="Previous page: if...elif...else语句的使用"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../01/section05.html" class="navigation navigation-next " aria-label="Next page: 条件判断练习:猜拳游戏"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

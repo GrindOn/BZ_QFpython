@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>文件的打开和关闭 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter02.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="文件的打开和关闭"
+        data-filepath="chapter01.md"
+        data-basepath="."
+        data-revision="Sun Feb 23 2020 15:33:36 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        文件的打开和关闭
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        文件的读取和写入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        CSV文件的读写
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        将数据写入内存
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        练习：实现文件拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        序列化和反序列化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        异常处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        with关键字的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter09.html">
+            
+                
+                    <a href="./chapter09.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        自定义异常
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x6587;&#x4EF6;&#x7684;&#x6253;&#x5F00;&#x4E0E;&#x5173;&#x95ED;">&#x6587;&#x4EF6;&#x7684;&#x6253;&#x5F00;&#x4E0E;&#x5173;&#x95ED;</h2>
+<p>&#x60F3;&#x4E00;&#x60F3;&#xFF1A;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x60F3;&#x7528;word&#x7F16;&#x5199;&#x4E00;&#x4EFD;&#x7B80;&#x5386;&#xFF0C;&#x5E94;&#x8BE5;&#x6709;&#x54EA;&#x4E9B;&#x6D41;&#x7A0B;&#x5462;&#xFF1F;</p>
+<ol>
+<li>&#x6253;&#x5F00;word&#x8F6F;&#x4EF6;&#xFF0C;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;word&#x6587;&#x4EF6;</li>
+<li>&#x5199;&#x5165;&#x4E2A;&#x4EBA;&#x7B80;&#x5386;&#x4FE1;&#x606F;</li>
+<li>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;</li>
+<li>&#x5173;&#x95ED;word&#x8F6F;&#x4EF6;</li>
+</ol>
+</blockquote>
+<p>&#x540C;&#x6837;&#xFF0C;&#x5728;&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x6574;&#x4F53;&#x8FC7;&#x7A0B;&#x4E0E;&#x4F7F;&#x7528;word&#x7F16;&#x5199;&#x4E00;&#x4EFD;&#x7B80;&#x5386;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x5F88;&#x76F8;&#x4F3C;&#x7684;</p>
+<blockquote>
+<ol>
+<li>&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x6216;&#x8005;&#x65B0;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li>&#x8BFB;/&#x5199;&#x6570;&#x636E;</li>
+<li>&#x5173;&#x95ED;&#x6587;&#x4EF6;</li>
+</ol>
+</blockquote>
+<h3 id="&#x6253;&#x5F00;&#x6587;&#x4EF6;"><1>&#x6253;&#x5F00;&#x6587;&#x4EF6;</1></h3>
+<p>&#x5728;python&#xFF0C;&#x4F7F;&#x7528;open&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6216;&#x8005;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;</p>
+<p>open(&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;)</p>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">f = open(<span class="hljs-string">&apos;test.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>)
+</code></pre>
+<p>&#x8BF4;&#x660E;:</p>
+<p><strong>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</strong></p>
+<p>&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x4E3A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x548C;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x4E24;&#x79CD;&#x3002;</p>
+<ul>
+<li><p>&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF1A;&#x6307;&#x7684;&#x662F;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#xFF0C;&#x5B8C;&#x6574;&#x5730;&#x63CF;&#x8FF0;&#x4E86;&#x76EE;&#x6807;&#x7684;&#x6240;&#x5728;&#x5730;&#xFF0C;&#x6240;&#x6709;&#x76EE;&#x5F55;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x662F;&#x4E00;&#x76EE;&#x4E86;&#x7136;&#x7684;&#x3002;</p>
+<ul>
+<li>&#x4F8B;&#x5982;&#xFF1A;<code>C:/Users/chris/AppData/Local/Programs/Python/Python37/python.exe</code>&#xFF0C;&#x4ECE;&#x7535;&#x8111;&#x7684;&#x76D8;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x8868;&#x793A;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF1A;&#x662F;&#x4ECE;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5F00;&#x59CB;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<ul>
+<li><code>test.txt</code>&#xFF0C;&#x662F;&#x5728;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x67E5;&#x627E; <code>test.txt</code> &#x6587;&#x4EF6;</li>
+<li><code>./test.txt</code>&#xFF0C;&#x4E5F;&#x662F;&#x5728;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x67E5;&#x627E;<code>test.txt</code>&#x6587;&#x4EF6;&#xFF0C; <code>./</code> &#x8868;&#x793A;&#x7684;&#x662F;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x3002;</li>
+<li><code>../test.txt</code>&#xFF0C;&#x4ECE;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x4E0A;&#x4E00;&#x7EA7;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x67E5;&#x627E; <code>test.txt</code> &#x6587;&#x4EF6;&#x3002; <code>../</code> &#x8868;&#x793A;&#x7684;&#x662F;&#x4E0A;&#x4E00;&#x7EA7;&#x6587;&#x4EF6;&#x5939;</li>
+<li><code>demo/test.txt</code>&#xFF0C;&#x5728;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x67E5;&#x627E; <code>demo</code>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5E76;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x67E5;&#x627E; <code>test.txt</code>&#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:left">&#x4EE5;&#x53EA;&#x8BFB;&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x6587;&#x4EF6;&#x7684;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x62A5;&#x9519;&#x3002;<strong>&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;&#x3002;</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:left">&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53EA;&#x7528;&#x4E8E;&#x5199;&#x5165;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x5C06;&#x5176;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:left">&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8FFD;&#x52A0;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x4F1A;&#x88AB;&#x5199;&#x5165;&#x5230;&#x5DF2;&#x6709;&#x5185;&#x5BB9;&#x4E4B;&#x540E;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5199;&#x5165;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">r+</td>
+<td style="text-align:left">&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">w+</td>
+<td style="text-align:left">&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x5C06;&#x5176;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">a+</td>
+<td style="text-align:left">&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x65F6;&#x4F1A;&#x662F;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">rb</td>
+<td style="text-align:left">&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x53EA;&#x8BFB;&#x3002;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">wb</td>
+<td style="text-align:left">&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53EA;&#x7528;&#x4E8E;&#x5199;&#x5165;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x5C06;&#x5176;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">ab</td>
+<td style="text-align:left">&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8FFD;&#x52A0;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x4F1A;&#x88AB;&#x5199;&#x5165;&#x5230;&#x5DF2;&#x6709;&#x5185;&#x5BB9;&#x4E4B;&#x540E;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5199;&#x5165;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">rb+</td>
+<td style="text-align:left">&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">wb+</td>
+<td style="text-align:left">&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x5C06;&#x5176;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">ab+</td>
+<td style="text-align:left">&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5173;&#x95ED;&#x6587;&#x4EF6;"><2>&#x5173;&#x95ED;&#x6587;&#x4EF6;</2></h3>
+<p>close( )</p>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x4E3A;:test.txt</span>
+f = open(<span class="hljs-string">&apos;test.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>)
+
+<span class="hljs-comment"># &#x5173;&#x95ED;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;</span>
+f.close()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: 学习目标"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter02.html" class="navigation navigation-next " aria-label="Next page: 文件的读取和写入"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

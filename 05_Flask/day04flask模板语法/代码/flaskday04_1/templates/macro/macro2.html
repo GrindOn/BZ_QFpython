@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宏的使用2</title>
+</head>
+<body>
+{% import 'macro/macro.html' as func %}
+{{ func.form('/welcome',value='注册') }}
+
+{% set username ='zhangsan' %}
+
+{{ username }}
+
+{% with num=1000  %}
+   {{ num }}
+{% endwith %}
+
+{{ num }}
+
+</body>
+</html>

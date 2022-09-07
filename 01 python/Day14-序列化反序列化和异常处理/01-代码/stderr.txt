@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:/Users/chris/Desktop/Python基础/Day14-迭代器生成器/01-代码/08-sys模块的使用.py", line 25, in <module>
+    print(1 / 0)
+ZeroDivisionError: division by zero

@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>字符串的下标和切片 | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter03.html" />
+    
+    
+    <link rel="prev" href="./chapter01.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2"
+        data-chapter-title="字符串的下标和切片"
+        data-filepath="chapter02.md"
+        data-basepath="."
+        data-revision="Tue Feb 04 2020 11:24:25 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        字符串的表示方式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        字符串的下标和切片
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        字符串的常见操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        字符集和编码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        成员运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        字符串的format方法
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x4E0B;&#x6807;&#x548C;&#x5207;&#x7247;">&#x4E0B;&#x6807;&#x548C;&#x5207;&#x7247;</h2>
+<h3 id="&#x4E00;&#x3001;-&#x4E0B;&#x6807;&#x7D22;&#x5F15;">&#x4E00;&#x3001; &#x4E0B;&#x6807;/&#x7D22;&#x5F15;</h3>
+<p>&#x6240;&#x8C13;<code>&#x201C;&#x4E0B;&#x6807;&#x201D;</code>&#x53C8;&#x53EB;<code>&#x201C;&#x7D22;&#x5F15;&#x201D;</code>&#xFF0C;&#x5C31;&#x662F;&#x7F16;&#x53F7;&#xFF0C;&#x5C31;&#x597D;&#x6BD4;&#x8D85;&#x5E02;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x67DC;&#x7684;&#x7F16;&#x53F7;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7F16;&#x53F7;&#x5C31;&#x80FD;&#x627E;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</p>
+<ul>
+<li><p>&#x751F;&#x6D3B;&#x4E2D;&#x7684; &quot;&#x4E0B;&#x6807;&quot;</p>
+<p>&#x8D85;&#x5E02;&#x50A8;&#x7269;&#x67DC;</p>
+<p><img src="imgs/&#x50A8;&#x7269;&#x67DC;.jpg" alt="img"></p>
+</li>
+<li><p>&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&quot;&#x4E0B;&#x6807;&quot;&#x7684;&#x4F7F;&#x7528;</p>
+<p>&#x5982;&#x679C;&#x6709;&#x5B57;&#x7B26;&#x4E32;:<code>name = &apos;abcdef&apos;</code>&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5B9E;&#x9645;&#x5B58;&#x50A8;&#x5982;&#x4E0B;:</p>
+<p><img src="imgs/&#x4E0B;&#x6807;.png" alt="img"></p>
+<p>&#x5982;&#x679C;&#x60F3;&#x53D6;&#x51FA;&#x90E8;&#x5206;&#x5B57;&#x7B26;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&#x4E0B;&#x6807;</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#xFF08;<span style="color:blue">&#x6CE8;&#x610F;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#xFF0C;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;<span>&#xFF09;</span></span></p>
+<pre><code class="lang-python">   name = <span class="hljs-string">&apos;abcdef&apos;</span>
+
+   print(name[<span class="hljs-number">0</span>])
+   print(name[<span class="hljs-number">1</span>])
+   print(name[<span class="hljs-number">2</span>])
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;:</p>
+<pre><code>a
+b
+c
+</code></pre></li>
+</ul>
+<h3 id="2-&#x904D;&#x5386;">2. &#x904D;&#x5386;</h3>
+<p>&#x6240;&#x8C13;&#x904D;&#x5386;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x89C4;&#x5219;(&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5C31;&#x662F;&#x6570;&#x636E;&#x7684;&#x4E0B;&#x6807;)&#xFF0C;&#x8BBF;&#x95EE;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x3002;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x80FD;&#x591F;&#x88AB;&#x904D;&#x5386;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;while&#x548C;for&#x8BED;&#x53E5;&#xFF0C;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x3002;</p>
+<p>while&#x8BED;&#x53E5;&#x904D;&#x5386;:</p>
+<pre><code class="lang-python">msg = <span class="hljs-string">&apos;hello world&apos;</span>
+i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> i &lt; len(msg):
+    print(msg[i])
+    i += <span class="hljs-number">1</span>
+</code></pre>
+<p>for&#x8BED;&#x53E5;&#x904D;&#x5386;:</p>
+<pre><code class="lang-python">msg = <span class="hljs-string">&apos;hello world&apos;</span>
+<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> msg:
+    print(x)
+</code></pre>
+<h3 id="3-&#x5207;&#x7247;">3. &#x5207;&#x7247;</h3>
+<p>&#x5207;&#x7247;&#x662F;&#x6307;&#x5BF9;&#x64CD;&#x4F5C;&#x7684;&#x5BF9;&#x8C61;&#x622A;&#x53D6;&#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x64CD;&#x4F5C;&#x3002;<strong>&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;</strong>&#x90FD;&#x652F;&#x6301;&#x5207;&#x7247;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><span style="font-size:20px;color:red;font-weight:700">&#x5207;&#x7247;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;[&#x8D77;&#x59CB;:&#x7ED3;&#x675F;:&#x6B65;&#x957F;]&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4F7F;&#x7528; [&#x8D77;&#x59CB;:&#x7ED3;&#x675F;]</span></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x9009;&#x53D6;&#x7684;&#x533A;&#x95F4;&#x4ECE;&quot;&#x8D77;&#x59CB;&quot;&#x4F4D;&#x5F00;&#x59CB;&#xFF0C;&#x5230;&quot;&#x7ED3;&#x675F;&quot;&#x4F4D;&#x7684;&#x524D;&#x4E00;&#x4F4D;&#x7ED3;&#x675F;&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x7ED3;&#x675F;&#x4F4D;&#x672C;&#x8EAB;)&#xFF0C;&#x6B65;&#x957F;&#x8868;&#x793A;&#x9009;&#x53D6;&#x95F4;&#x9694;&#x3002;</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x7D22;&#x5F15;&#x662F;&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x53D6;&#x67D0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-comment"># &#x5207;&#x7247;&#x662F;&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x53BB;&#x67D0;&#x4E00;&#x6BB5;&#x5143;&#x7D20;</span>
+
+s = <span class="hljs-string">&apos;Hello World!&apos;</span>
+print(s)
+
+print(s[<span class="hljs-number">4</span>])  <span class="hljs-comment"># o &#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;</span>
+
+print(s[<span class="hljs-number">3</span>:<span class="hljs-number">7</span>])  <span class="hljs-comment"># lo W &#x5305;&#x542B;&#x4E0B;&#x6807; 3&#xFF0C;&#x4E0D;&#x542B;&#x4E0B;&#x6807; 7</span>
+
+print(s[:]) <span class="hljs-comment"># Hello World! &#x53D6;&#x51FA;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF08;&#x6CA1;&#x6709;&#x8D77;&#x59CB;&#x4F4D;&#x548C;&#x7ED3;&#x675F;&#x4F4D;&#x4E4B;&#x5206;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x6B65;&#x957F;&#x4E3A;1</span>
+
+print(s[<span class="hljs-number">1</span>:]) <span class="hljs-comment"># ello World! &#x4ECE;&#x4E0B;&#x6807;&#x4E3A;1&#x5F00;&#x59CB;&#xFF0C;&#x53D6;&#x51FA; &#x540E;&#x9762;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#x4F4D;&#xFF09;</span>
+
+print(s[:<span class="hljs-number">4</span>])  <span class="hljs-comment"># Hell &#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#xFF0C;&#x53D6;&#x5230; &#x4E0B;&#x6807;&#x4E3A;4&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7ED3;&#x675F;&#x4F4D;&#x672C;&#x8EAB;&#xFF09;</span>
+
+print(s[:-<span class="hljs-number">1</span>]) <span class="hljs-comment"># Hello World &#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#xFF0C;&#x53D6;&#x5230; &#x5012;&#x6570;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7ED3;&#x675F;&#x4F4D;&#x672C;&#x8EAB;&#xFF09;</span>
+
+print(s[-<span class="hljs-number">4</span>:-<span class="hljs-number">1</span>]) <span class="hljs-comment"># rld &#x4ECE;&#x5012;&#x6570;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#xFF0C;&#x53D6;&#x5230; &#x5012;&#x6570;&#x7B2C;1&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7ED3;&#x675F;&#x4F4D;&#x672C;&#x8EAB;&#xFF09;</span>
+
+print(s[<span class="hljs-number">1</span>:<span class="hljs-number">5</span>:<span class="hljs-number">2</span>]) <span class="hljs-comment"># el &#x4ECE;&#x4E0B;&#x6807;&#x4E3A;1&#x5F00;&#x59CB;&#xFF0C;&#x53D6;&#x5230;&#x4E0B;&#x6807;&#x4E3A;5&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6B65;&#x957F;&#x4E3A;2&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x7ED3;&#x675F;&#x4F4D;&#x672C;&#x8EAB;&#xFF09;</span>
+
+print(s[<span class="hljs-number">7</span>:<span class="hljs-number">2</span>:-<span class="hljs-number">1</span>]) <span class="hljs-comment"># ow ol &#x4ECE;&#x4E0B;&#x6807;&#x4E3A;7&#x7684;&#x5143;&#x7D20;&#x5F00;&#x59CB;(&#x5305;&#x542B;&#x4E0B;&#x6807;&#x4E3A;7&#x7684;&#x5143;&#x7D20;)&#xFF0C;&#x5012;&#x7740;&#x53D6;&#x5230;&#x4E0B;&#x6807;&#x4E3A;2&#x7684;&#x5143;&#x7D20;(&#x4E0D;&#x5305;&#x62EC;&#x4E0B;&#x6807;&#x4E3A;2&#x7684;&#x5143;&#x7D20;) </span>
+
+<span class="hljs-comment"># python &#x5B57;&#x7B26;&#x4E32;&#x5FEB;&#x901F;&#x9006;&#x7F6E;</span>
+print(s[::-<span class="hljs-number">1</span>])  <span class="hljs-comment"># !dlroW olleH &#x4ECE;&#x540E;&#x5411;&#x524D;&#xFF0C;&#x6309;&#x6B65;&#x957F;&#x4E3A;1&#x8FDB;&#x884C;&#x53D6;&#x503C;</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter01.html" class="navigation navigation-prev " aria-label="Previous page: 字符串的表示方式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter03.html" class="navigation navigation-next " aria-label="Next page: 字符串的常见操作"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

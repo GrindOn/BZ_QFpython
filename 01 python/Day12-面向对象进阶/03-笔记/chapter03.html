@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>继承的基本使用 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter04.html" />
+    
+    
+    <link rel="prev" href="./chapter02.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="继承的基本使用"
+        data-filepath="chapter03.md"
+        data-basepath="."
+        data-revision="Sun Feb 23 2020 13:59:40 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        类方法和实例方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        单例设计模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        继承的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        继承的注意使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        对象相关的运算符和内置函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        多态的使用
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7EE7;&#x627F;&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;">&#x7EE7;&#x627F;&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;</h2>
+<p>&#x5728;&#x73B0;&#x5B9E;&#x751F;&#x6D3B;&#x4E2D;&#xFF0C;&#x7EE7;&#x627F;&#x4E00;&#x822C;&#x6307;&#x7684;&#x662F;&#x5B50;&#x5973;&#x7EE7;&#x627F;&#x7236;&#x8F88;&#x7684;&#x8D22;&#x4EA7;&#xFF0C;&#x7236;&#x8F88;&#x6709;&#x7684;&#x8D22;&#x4EA7;&#xFF0C;&#x5B50;&#x5973;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x7A0B;&#x5E8F;&#x91CC;&#x7684;&#x7EE7;&#x627F;">&#x7A0B;&#x5E8F;&#x91CC;&#x7684;&#x7EE7;&#x627F;</h3>
+<p>&#x7EE7;&#x627F;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8F6F;&#x4EF6;&#x8BBE;&#x8BA1;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x4E0E;&#x591A;&#x6001;&#x3001;&#x5C01;&#x88C5;&#x5171;&#x4E3A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x4E09;&#x4E2A;&#x57FA;&#x672C;&#x7279;&#x5F81;&#x3002;&#x7EE7;&#x627F;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x5B50;&#x7C7B;&#x5177;&#x6709;&#x7236;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x3001;&#x8FFD;&#x52A0;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x7B49;&#x3002;</p>
+<p><img src="imgs/&#x7EE7;&#x627F;.png" alt=""></p>
+<ul>
+<li>&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x7EE7;&#x627F;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x591A;&#x4E2A;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x6240;&#x5C5E;&#x5173;&#x7CFB;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7C7B;A&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F20;&#x9012;&#x5230;&#x7C7B;B&#x91CC;&#x3002;</li>
+<li>&#x90A3;&#x4E48;&#x7C7B;A&#x5C31;&#x662F;&#x57FA;&#x7C7B;&#xFF0C;&#x4E5F;&#x53EB;&#x505A;&#x7236;&#x7C7B;&#xFF1B;&#x7C7B;B&#x5C31;&#x662F;&#x6D3E;&#x751F;&#x7C7B;&#xFF0C;&#x4E5F;&#x53EB;&#x505A;&#x5B50;&#x7C7B;&#x3002;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__int__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x52A8;&#x7269;&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sleep</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;&#x6B63;&#x5728;&#x7761;&#x89C9;&apos;</span>)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span><span class="hljs-params">(Animal)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Dog&#x7C7B;&#x7EE7;&#x627F;&#x81EA;Animal&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span><span class="hljs-params">(Animal)</span>:</span>  <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x7C7B;&#x65F6;&#xFF0C;&#x5728;&#x62EC;&#x53F7;&#x540E;&#x9762;&#x4F20;&#x5165;&#x7236;&#x7C7B;&#x7684;&#x7C7B;&#x540D;&#xFF0C;&#x8868;&#x793A;&#x5B50;&#x7C7B;&#x7EE7;&#x627F;&#x7236;&#x7C7B;</span>
+    <span class="hljs-string">&quot;&quot;&quot;Cat&#x7C7B;&#x7EE7;&#x627F;&#x81EA;Animal&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__int__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># Dog &#x548C; Cat &#x90FD;&#x7EE7;&#x627F;&#x81EA;Animal&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;Animal&#x7C7B;&#x91CC;&#x7684;sleep&#x65B9;&#x6CD5;</span>
+dog = Dog()
+dog.sleep()
+
+cat = Cat()
+cat.sleep()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter02.html" class="navigation navigation-prev " aria-label="Previous page: 单例设计模式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter04.html" class="navigation navigation-next " aria-label="Next page: 继承的注意使用"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

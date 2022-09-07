@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        .info {
+            color: deepskyblue;
+        }
+
+        .warning {
+            color: orange;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+{#{% with messages = get_flashed_messages() %}#}
+{#    {% if messages %}#}
+{#        <ul>#}
+{#            {% for message in messages %}#}
+{#                <li>{{ message }}</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    {% endif %}#}
+{#{% endwith %}#}
+{# [(category, message),(category, message),(),()]#}
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+<a href="{{ url_for('test') }}">测试闪现数据获取</a>
+
+</body>
+</html>

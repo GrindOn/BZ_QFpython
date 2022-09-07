@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>正则替换 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter08.html" />
+    
+    
+    <link rel="prev" href="./chapter06.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="7"
+        data-chapter-title="正则替换"
+        data-filepath="chapter07.md"
+        data-basepath="."
+        data-revision="Sun Mar 01 2020 21:44:51 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        正则查找
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        re.Match类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        re.complie的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        正则修饰符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        正则模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        正则替换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        贪婪模式和非贪婪模式
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x6B63;&#x5219;&#x66FF;&#x6362;">&#x6B63;&#x5219;&#x66FF;&#x6362;</h2>
+<p>Python&#x4E2D;&#x7684;re&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;re.sub&#x7528;&#x6237;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5339;&#x914D;&#x9879;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">re.sub(pattern,repl,string,count=<span class="hljs-number">0</span>)
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>pattern : &#x6B63;&#x5219;&#x4E2D;&#x7684;&#x6A21;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>repl : &#x66FF;&#x6362;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;</li>
+<li>string : &#x8981;&#x88AB;&#x67E5;&#x627E;&#x66FF;&#x6362;&#x7684;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>count : &#x6A21;&#x5F0F;&#x5339;&#x914D;&#x540E;&#x66FF;&#x6362;&#x7684;&#x6700;&#x5927;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4; 0 &#x8868;&#x793A;&#x66FF;&#x6362;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x3002;</li>
+</ul>
+<pre><code class="lang-python">phone = <span class="hljs-string">&quot;2004-959-559 # &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7535;&#x8BDD;&#x53F7;&#x7801;&quot;</span>
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6CE8;&#x91CA;</span>
+num = re.sub(<span class="hljs-string">r&apos;#.*$&apos;</span>, <span class="hljs-string">&quot;&quot;</span>, phone)
+<span class="hljs-keyword">print</span> (<span class="hljs-string">&quot;&#x7535;&#x8BDD;&#x53F7;&#x7801; : &quot;</span>, num)
+
+<span class="hljs-comment"># &#x79FB;&#x9664;&#x975E;&#x6570;&#x5B57;&#x7684;&#x5185;&#x5BB9;</span>
+num = re.sub(<span class="hljs-string">r&apos;\D&apos;</span>, <span class="hljs-string">&quot;&quot;</span>, phone)
+<span class="hljs-keyword">print</span> (<span class="hljs-string">&quot;&#x7535;&#x8BDD;&#x53F7;&#x7801; : &quot;</span>, num)
+</code></pre>
+<p>repl&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7528;&#x6765;&#x8868;&#x793A;&#x66FF;&#x6362;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x4EE5;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">double</span><span class="hljs-params">(matched)</span>:</span>
+    test = int(matched.group(<span class="hljs-string">&apos;test&apos;</span>))
+    <span class="hljs-keyword">return</span> str(test * <span class="hljs-number">2</span>)
+
+
+print(re.sub(<span class="hljs-string">r&apos;(?P&lt;test&gt;\d+)&apos;</span>, double, <span class="hljs-string">&apos;hello23hi34&apos;</span>))  <span class="hljs-comment"># hello46hi68</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter06.html" class="navigation navigation-prev " aria-label="Previous page: 正则模式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter08.html" class="navigation navigation-next " aria-label="Next page: 贪婪模式和非贪婪模式"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

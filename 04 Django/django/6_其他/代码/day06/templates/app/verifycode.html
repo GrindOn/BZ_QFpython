@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'App:cap' %}" method="post">
+    {% csrf_token %}
+    {{ form.captcha }} {{ form.captcha.errors }} <br>
+
+    <input type="submit">
+</form>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+<script>
+    //点击刷新验证码
+    $(function () {
+        $('.captcha').css({
+            'cursor': 'pointer'
+        });
+        // ajax刷新
+        $('.captcha').click(function () {
+            console.log('click');
+            $.get("/refresh/refresh/",
+                function (result) {
+                    $('.captcha').attr('src', result['image_url']);
+                    $('#id_captcha_0').val(result['key'])
+                });
+        });
+    })
+</script>

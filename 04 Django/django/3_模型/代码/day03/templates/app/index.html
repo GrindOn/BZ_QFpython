@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<p>
+{#  不能写表达式  #}
+    {{ num }}--{{ name }}
+</p>
+<p>
+    {{ num|add:20 }}
+</p>
+<p>
+    {% if num > 10 %}
+        <h2>{{ num }}</h2>
+    {% endif %}
+</p>
+
+{% for value in list1 %}
+    <li>{{ value }}</li>
+{% empty %}
+    <h2>数据为空</h2>
+{% endfor %}
+
+
+</body>
+</html>

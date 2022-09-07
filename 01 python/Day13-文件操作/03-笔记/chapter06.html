@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>序列化和反序列化 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter07.html" />
+    
+    
+    <link rel="prev" href="./chapter05.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="6"
+        data-chapter-title="序列化和反序列化"
+        data-filepath="chapter06.md"
+        data-basepath="."
+        data-revision="Sun Feb 23 2020 15:33:36 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        文件的打开和关闭
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        文件的读取和写入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        CSV文件的读写
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        将数据写入内存
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        练习：实现文件拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        序列化和反序列化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        异常处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        with关键字的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter09.html">
+            
+                
+                    <a href="./chapter09.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        自定义异常
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;">&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;</h2>
+<p>&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5199;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;(&#x4F8B;&#x5982;&#x5217;&#x8868;&#x3001;&#x5B57;&#x5178;&#x3001;&#x5143;&#x7EC4;&#x7B49;)&#xFF0C;&#x5C31;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
+<p>&#x8BBE;&#x8BA1;&#x4E00;&#x5957;&#x534F;&#x8BAE;&#xFF0C;&#x6309;&#x7167;&#x67D0;&#x79CD;&#x89C4;&#x5219;&#xFF0C;&#x628A;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x53CD;&#x4E4B;&#xFF0C;&#x4ECE;&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x6062;&#x590D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5C31;&#x662F;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x3002;</p>
+<p>Python&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;JSON&#x548C;pickle&#x4E24;&#x4E2A;&#x6A21;&#x5757;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x3002;</p>
+<h3 id="json&#x6A21;&#x5757;">JSON&#x6A21;&#x5757;</h3>
+<p>JSON(JavaScriptObjectNotation, JS&#x5BF9;&#x8C61;&#x7B80;&#x8C31;)&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#xFF0C;&#x5B83;&#x57FA;&#x4E8E; ECMAScript &#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#xFF0C;&#x91C7;&#x7528;&#x5B8C;&#x5168;&#x72EC;&#x7ACB;&#x4E8E;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7684;<strong>&#x6587;&#x672C;&#x683C;&#x5F0F;</strong>&#x6765;&#x5B58;&#x50A8;&#x548C;&#x8868;&#x793A;&#x6570;&#x636E;&#x3002;<span style="color:red">JSON&#x7684;&#x672C;&#x8D28;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF01;</span></p>
+<h4 id="&#x4F7F;&#x7528;json&#x5B9E;&#x73B0;&#x5E8F;&#x5217;&#x5316;">&#x4F7F;&#x7528;JSON&#x5B9E;&#x73B0;&#x5E8F;&#x5217;&#x5316;</h4>
+<p>JSON&#x63D0;&#x4F9B;&#x4E86;dump&#x548C;dumps&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#x3002;</p>
+<p>dumps&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x628A;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B83;&#x672C;&#x8EAB;&#x4E0D;&#x5177;&#x5907;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> json
+file = open(<span class="hljs-string">&apos;names.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>)
+names = [<span class="hljs-string">&apos;zhangsan&apos;</span>, <span class="hljs-string">&apos;lisi&apos;</span>, <span class="hljs-string">&apos;wangwu&apos;</span>, <span class="hljs-string">&apos;jerry&apos;</span>, <span class="hljs-string">&apos;henry&apos;</span>, <span class="hljs-string">&apos;merry&apos;</span>, <span class="hljs-string">&apos;chris&apos;</span>]
+<span class="hljs-comment"># file.write(names)  &#x51FA;&#x9519;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5C06;&#x5217;&#x8868;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;</span>
+
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x8C03;&#x7528; json&#x7684;dumps&#x65B9;&#x6CD5;&#xFF0C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53C2;&#x6570;</span>
+result = json.dumps(names)
+
+<span class="hljs-comment"># dumps &#x65B9;&#x6CD5;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</span>
+print(type(result))  <span class="hljs-comment"># &lt;class &apos;str&apos;&gt;</span>
+
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;</span>
+file.write(result)
+
+file.close()
+</code></pre>
+<p>dump&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#xFF0C;&#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5199;&#x5165;&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> json
+
+file = open(<span class="hljs-string">&apos;names.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>)
+names = [<span class="hljs-string">&apos;zhangsan&apos;</span>, <span class="hljs-string">&apos;lisi&apos;</span>, <span class="hljs-string">&apos;wangwu&apos;</span>, <span class="hljs-string">&apos;jerry&apos;</span>, <span class="hljs-string">&apos;henry&apos;</span>, <span class="hljs-string">&apos;merry&apos;</span>, <span class="hljs-string">&apos;chris&apos;</span>]
+
+<span class="hljs-comment"># dump&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x540C;&#x65F6;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;</span>
+json.dump(names, file)
+file.close()
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;dumps&#x65B9;&#x6CD5;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;JSON&#x5BF9;&#x8C61;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;null(JS&#x91CC;&#x7684;&#x7A7A;&#x5BF9;&#x8C61;)</p>
+<pre><code class="lang-python">json.dumps(<span class="hljs-keyword">None</span>)  <span class="hljs-comment"># null</span>
+</code></pre>
+<h4 id="&#x4F7F;&#x7528;json&#x5B9E;&#x73B0;&#x53CD;&#x5E8F;&#x5217;&#x5316;">&#x4F7F;&#x7528;JSON&#x5B9E;&#x73B0;&#x53CD;&#x5E8F;&#x5217;&#x5316;</h4>
+<p>&#x4F7F;&#x7528;loads&#x548C;load&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;JSON&#x5B57;&#x7B26;&#x4E32;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;Python&#x5BF9;&#x8C61;&#x3002;</p>
+<p>loads&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x52A0;&#x8F7D;&#x6210;&#x4E3A;Python&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> json
+
+<span class="hljs-comment"># &#x8C03;&#x7528;loads&#x65B9;&#x6CD5;&#xFF0C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x52A0;&#x8F7D;&#x6210;&#x4E3A;Python&#x5BF9;&#x8C61;</span>
+result = json.loads(<span class="hljs-string">&apos;[&quot;zhangsan&quot;, &quot;lisi&quot;, &quot;wangwu&quot;, &quot;jerry&quot;, &quot;henry&quot;, &quot;merry&quot;, &quot;chris&quot;]&apos;</span>)
+print(type(result))  <span class="hljs-comment"># &lt;class &apos;list&apos;&gt;</span>
+</code></pre>
+<p>load&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x6765;&#x5C06;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x6210;&#x4E3A;Python&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> json
+
+<span class="hljs-comment"># &#x4EE5;&#x53EF;&#x8BFB;&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</span>
+file = open(<span class="hljs-string">&apos;names.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>)
+
+<span class="hljs-comment"># &#x8C03;&#x7528;load&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x52A0;&#x8F7D;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;Python&#x5BF9;&#x8C61;</span>
+result = json.load(file)
+
+print(result)
+file.close()
+</code></pre>
+<h3 id="pickle&#x6A21;&#x5757;">pickle&#x6A21;&#x5757;</h3>
+<p>&#x548C;json&#x6A21;&#x5757;&#x7C7B;&#x4F3C;&#xFF0C;pickle&#x6A21;&#x5757;&#x4E5F;&#x6709;dump&#x548C;dumps&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x6709;load&#x548C;loads&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x3002;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;json&#x6A21;&#x5757;&#x662F;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;pickle&#x6A21;&#x5757;&#x662F;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x3002;</p>
+<p>pickle&#x6A21;&#x5757;&#x91CC;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x548C;json&#x91CC;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x5927;&#x81F4;&#x76F8;&#x540C;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<strong>pickle&#x662F;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x628A;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x8981;&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x5F62;&#x5F0F;&#x6253;&#x5F00;&#x3002;</strong></p>
+<h3 id="&#x533A;&#x522B;&#x4E86;&#x89E3;">&#x533A;&#x522B;(&#x4E86;&#x89E3;)</h3>
+<blockquote>
+<p> &#x601D;&#x8003;: json&#x548C;pickle&#x4E24;&#x4E2A;&#x6A21;&#x5757;&#x90FD;&#x53EF;&#x4EE5;&#x5C06;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x90A3;&#x5B83;&#x4EEC;&#x6709;&#x54EA;&#x4E9B;&#x533A;&#x522B;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E0A;&#x53C8;&#x8BE5;&#x5982;&#x4F55;&#x9009;&#x62E9;&#xFF1F;</p>
+</blockquote>
+<ul>
+<li><p>json&#x6A21;&#x5757;:</p>
+<ul>
+<li><p>&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x5728;&#x54EA;&#x79CD;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x54EA;&#x79CD;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x91CC;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x662F;&#x53EF;&#x8BC6;&#x522B;&#x7684;&#x3002;</p>
+</li>
+<li><p>json&#x5C31;&#x662F;&#x7528;&#x6765;&#x5728;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7684;&#x3002;</p>
+</li>
+<li><p>&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0B;&#x6807;&#x5217;&#x51FA;&#x4E86;Python&#x5BF9;&#x8C61;&#x4E0E;json&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x3002;</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Python</th>
+<th>JSON</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dict</td>
+<td>object</td>
+</tr>
+<tr>
+<td>list,tuple</td>
+<td>array</td>
+</tr>
+<tr>
+<td>str</td>
+<td>string</td>
+</tr>
+<tr>
+<td>int,float</td>
+<td>number</td>
+</tr>
+<tr>
+<td>True</td>
+<td>true</td>
+</tr>
+<tr>
+<td>False</td>
+<td>false</td>
+</tr>
+<tr>
+<td>None</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#xFF0C;&#x9ED8;&#x8BA4;&#x65E0;&#x6CD5;&#x88C5;&#x6362;&#x6210;&#x4E3A;json&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x6307;&#x5B9A;JSONEncoder.</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x662F;&#x5C06;&#x4E00;&#x4E2A;json&#x4E32;&#x91CD;&#x65B0;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> json
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEncode</span><span class="hljs-params">(json.JSONEncoder)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">default</span><span class="hljs-params">(self, o)</span>:</span>
+        <span class="hljs-comment"># return {&quot;name&quot;:o.name,&quot;age&quot;:o.age}</span>
+        <span class="hljs-keyword">return</span> o.__dict__
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, age)</span>:</span>
+        self.name = name
+        self.age = age
+
+      <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">eat</span><span class="hljs-params">(self)</span>:</span>
+          print(self.name+<span class="hljs-string">&apos;&#x6B63;&#x5728;&#x5403;&#x4E1C;&#x897F;&apos;</span>)
+
+p1 = Person(<span class="hljs-string">&apos;zhangsan&apos;</span>, <span class="hljs-number">18</span>)
+
+<span class="hljs-comment"># &#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x60F3;&#x8981;&#x8F6C;&#x6362;&#x6210;&#x4E3A;json&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9700;&#x8981;&#x7ED9;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x6307;&#x5B9A;JSONEncoder</span>
+result = json.dumps(p1, cls=MyEncode)
+print(result)  <span class="hljs-comment"># {&quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;: 18}</span>
+
+<span class="hljs-comment"># &#x8C03;&#x7528;loads&#x65B9;&#x6CD5;&#x5C06;&#x5BF9;&#x8C61;&#x52A0;&#x8F7D;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4EE5;&#x540E;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;</span>
+p = json.loads(result)
+print(type(p))
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>pickle&#x6A21;&#x5757;&#xFF1A;</p>
+<ul>
+<li>pickle&#x5E8F;&#x5217;&#x5316;&#x662F;&#x5C06;&#x5BF9;&#x8C61;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x4FDD;&#x5B58;&#xFF0C;&#x5B83;&#x4E0D;&#x80FD;&#x8DE8;&#x5E73;&#x53F0;&#x4F20;&#x9012;&#x6570;&#x636E;&#x3002;</li>
+<li>pickle&#x7684;&#x5E8F;&#x5217;&#x5316;&#x4F1A;&#x5C06;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4FDD;&#x5B58;&#x3002;</li>
+</ul>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter05.html" class="navigation navigation-prev " aria-label="Previous page: 练习：实现文件拷贝"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter07.html" class="navigation navigation-next " aria-label="Next page: 异常处理"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

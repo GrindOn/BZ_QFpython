@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% block title %}
+    文章详情
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        #container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #detail {
+            background-color: rgba(232, 243, 242, 0.6);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px 50px;
+        }
+
+        #detail h2 {
+            text-align: center;
+        }
+
+        #detail h2 + div {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #left {
+            float: left;
+        }
+
+        #right {
+            float: right;
+            margin-right: 30px;
+        }
+
+        #content {
+            margin-top: 30px;
+        }
+
+        .item {
+            overflow: auto;
+            border-bottom: 1px solid lightgray;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        #item_left {
+            float: left;
+            width: 10%;
+            text-align: center;
+        }
+
+        #item_left img {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        #item_right {
+            float: right;
+            width: 90%;
+        }
+
+    </style>
+{% endblock %}
+{% block newcontent %}
+    <div id="container">
+        <div id="detail">
+            <h2>{{ article.title }}</h2>
+            <div>
+                <div id="left">作者:{{ article.user.username }} &nbsp;&nbsp;&nbsp; &nbsp;
+                    发布时间: {{ article.pdatetime }}</div>
+                <div id="right">
+                    <span class="glyphicon glyphicon-heart"
+                          aria-hidden="true"></span>&nbsp;&nbsp;<span tag="0">{{ article.save_num }}</span>
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                    <span class="glyphicon glyphicon-thumbs-up"
+                          aria-hidden="true"></span>&nbsp;&nbsp;<span tag="0">{{ article.love_num }}</span>
+                </div>
+            </div>
+            <div id="content">
+                {{ article.content|cdecode|safe }}
+            </div>
+            <hr>
+            <div id="comment">
+                <p>文章评论:</p>
+                <div>
+                    <form action="{{ url_for('article.article_comment') }}" method="post">
+                        <input type="hidden" name="aid" value="{{ article.id }}">
+                        <p>
+                    <textarea name="comment" class="form-control" style="width: 60%" rows="5" cols="60">写下你想说的，开始我们的对话
+                    </textarea>
+                        </p>
+                        <p><input type="submit" value="评论" class="btn btn-info"></p>
+                    </form>
+                </div>
+                <p style="margin: 20px 5px; border-bottom: 1px solid lightgray">
+
+                </p>
+                <div id="comment_item">
+                    {% if comments.items %}
+                        {% for comment in comments.items %}
+                            <div class="item">
+                                <div id="item_left">
+                                    <img src=" {% if comment.user.icon %} {{ url_for('static',filename=comment.user.icon) }} {% else %}{{ url_for('static',filename='images/touxiang.jpg') }}{% endif %}"
+                                         alt="">
+                                </div>
+                                <div id="item_right">
+                                    <p>
+                                        <span>{{ comment.user.username }}</span>
+                                        <span>{{ comment.cdatetime }}</span>
+                                    </p>
+                                    <p>
+                                        {{ comment.comment }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="item">
+                            当前文章还没有任何评论，赶快发表意见吧～～～～
+                        </div>
+                    {% endif %}
+                </div>
+                <div id="paginate">
+                    <nav aria-label="...">
+                        <ul class="pager">
+                            <li class="previous {% if not comments.has_prev %}disabled{% endif %}"><a
+                                    href="{{ url_for('article.article_detail') }}?page={{ comments.prev_num }}&aid={{ article.id }}"><span
+                                    aria-hidden="true">&larr;</span> 上一页</a></li>
+
+                            <li class="next {% if not comments.has_next %}disabled {% endif %}"><a
+                                    href="{{ url_for('article.article_detail') }}?page={{ comments.next_num }}&aid={{ article.id }}">下一页
+                                <span
+                                        aria-hidden="true">&rarr;</span></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $(function () {
+            // 收藏
+            $('.glyphicon-heart').click(function () {
+
+            });
+            // 点赞
+            $('.glyphicon-thumbs-up').click(function () {
+
+                let $this = $(this);
+                let tag = $this.next('span').attr('tag');
+
+                $.get('{{ url_for('article.article_love') }}', {aid:{{article.id}}, tag: tag}, function (data) {
+                    $this.next('span').text(data.num);
+
+                });
+                if (tag == 1) {
+                    $this.css({'color': 'black'});
+                    $this.next('span').attr('tag', "0");
+                } else {
+                    $this.css({'color': 'red'});
+                    $this.next('span').attr('tag', "1");
+                }
+
+
+            });
+            //文本域
+            $('textarea[name="comment"]').focus(function () {
+                $(this).val("")
+            })
+
+        })
+    </script>
+{% endblock %}

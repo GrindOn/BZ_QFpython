@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>手动搭建HTTP服务器 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter03.html" />
+    
+    
+    <link rel="prev" href="./chapter01.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="2"
+        data-chapter-title="手动搭建HTTP服务器"
+        data-filepath="chapter02.md"
+        data-basepath="."
+        data-revision="Thu Mar 05 2020 21:24:03 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        HTTP协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        手动搭建HTTP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        WSGI接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        新建WSGI服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        使用if管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06.html">
+            
+                
+                    <a href="./chapter06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        使用字典管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07.html">
+            
+                
+                    <a href="./chapter07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        使用装饰器管理请求路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08.html">
+            
+                
+                    <a href="./chapter08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        requests模块的介绍
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x624B;&#x52A8;&#x642D;&#x5EFA;http&#x670D;&#x52A1;&#x5668;">&#x624B;&#x52A8;&#x642D;&#x5EFA;HTTP&#x670D;&#x52A1;&#x5668;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">from</span> multiprocessing <span class="hljs-keyword">import</span> Process
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WSGIServer</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, server, port, root)</span>:</span>
+        self.server = server
+        self.port = port
+        self.root = root
+        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="hljs-number">1</span>)
+        self.server_socket.bind((self.server, self.port))
+        self.server_socket.listen(<span class="hljs-number">128</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_socket</span><span class="hljs-params">(self, socket)</span>:</span>
+        data = socket.recv(<span class="hljs-number">1024</span>).decode(<span class="hljs-string">&apos;utf-8&apos;</span>).splitlines()[<span class="hljs-number">0</span>]
+        file_name = re.match(<span class="hljs-string">r&apos;[^/]+(/[^ ]*)&apos;</span>, data)[<span class="hljs-number">1</span>]
+        <span class="hljs-comment"># print(file_name)</span>
+
+        <span class="hljs-keyword">if</span> file_name == <span class="hljs-string">&apos;/&apos;</span>:
+            file_name = self.root + <span class="hljs-string">&apos;/index.html&apos;</span>
+        <span class="hljs-keyword">else</span>:
+            file_name = self.root + file_name
+
+        <span class="hljs-keyword">try</span>:
+            file = open(file_name, <span class="hljs-string">&apos;rb&apos;</span>)
+        <span class="hljs-keyword">except</span> IOError:
+            response_header = <span class="hljs-string">&apos;HTTP/1.1 404 NOT FOUND \r\n&apos;</span>
+            response_header += <span class="hljs-string">&apos;\r\n&apos;</span>
+            response_body = <span class="hljs-string">&apos;========Sorry,file not found=======&apos;</span>.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+        <span class="hljs-keyword">else</span>:
+            response_header = <span class="hljs-string">&apos;HTTP/1.1 200 OK \r\n&apos;</span>
+            response_header += <span class="hljs-string">&apos;\r\n&apos;</span>
+            response_body = file.read()
+
+        <span class="hljs-keyword">finally</span>:
+            socket.send(response_header.encode(<span class="hljs-string">&apos;utf-8&apos;</span>))
+            socket.send(response_body)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forever_run</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+            client_socket, client_addr = self.server_socket.accept()
+            <span class="hljs-comment"># self.handle_socket(client_socket)</span>
+            p = Process(target=self.handle_socket, args=(client_socket,))
+            p.start()
+            client_socket.close()
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    ip = <span class="hljs-string">&apos;0.0.0.0&apos;</span>
+    port = <span class="hljs-number">8899</span>
+    server = WSGIServer(ip, port, <span class="hljs-string">&apos;./pages&apos;</span>)
+    print(<span class="hljs-string">&apos;server is running at {}:{}&apos;</span>.format(ip, port))
+    server.forever_run()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter01.html" class="navigation navigation-prev " aria-label="Previous page: HTTP协议"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter03.html" class="navigation navigation-next " aria-label="Next page: WSGI接口"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>

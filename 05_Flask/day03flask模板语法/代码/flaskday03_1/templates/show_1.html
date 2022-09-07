@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演示控制块</title>
+    <style>
+        .a {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+{#  ul...li  #}
+{#  ol...li  #}
+<!--
+  <button> 按钮 </button>
+-->
+{# {{ girls }} #}
+<ul>
+    {% for girl in girls %}
+        <li> {{ girl }} </li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<ul>
+    {% for girl in girls %}
+        {% if girl|length >= 3 %}
+            <li class="a"> {{ girl }}</li>
+        {% else %}
+            <li>{{ girl }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<hr>
+
+<table border="1" cellpadding="0" cellspacing="0" width="50%">
+    {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.addr }}</td>
+            <td>{{ user.phone }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+<hr>
+
+<table border="1" cellpadding="0" cellspacing="0" width="50%">
+    {% for user in users %}
+        <tr {% if loop.index == 3 %} style="background-color: deeppink" {% endif %}>
+            <td> {{ loop.index }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.addr }}</td>
+            <td>{{ user.phone }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
